@@ -90,12 +90,17 @@ prototool.yaml: $(proto_dir)/prototool.yaml
 	@cp $^ $@
 
 Makefile.istio: $(proto_dir)/Makefile
-	@set -ex; ls -ld $^; mkdir -p $(proto_path) $(proto_dir) ; \
+	@set -ex; ls -ld $^; mkdir -p $(proto_path) $(proto_dir) util; \
 	cd $(proto_dir)  ;\
 	for i in $(shell cd $(proto_dir) ; find . -iname vendor -prune -o -iname pkg -prune -o -iname \*.proto  | grep -v -e pkg -e vendor ); do \
 		cp --parents  $$i $(makefile_dir)/$(proto_path) && test -f $(makefile_dir)/$(proto_path)/$$i && \
 		grep -l istio $(makefile_dir)/$(proto_path)/$$i && sed -i 's@option\s\+go_package\s*=\s*"istio.io/api@option go_package="$(pkg)@g' $(makefile_dir)/$(proto_path)/$$i ; \
 	done ; \
+	for i in $(shell cd $(proto_dir) ; find . -iname vendor -prune -o -iname pkg -prune -o -iname zz_custom.deepcopy.go  | grep -v -e pkg -e vendor ); do \
+		cp --parents  $$i $(makefile_dir)/$(proto_path) && test -f $(makefile_dir)/$(proto_path)/$$i && \
+		sed -i 's@istio.io/api/util@$(pkg)/util@g' $(makefile_dir)/$(proto_path)/$$i ; \
+	done ;\
+	cp util/deepcopy.go $(makefile_dir)/util ; \
 	sed -i '/\n/!N;/\n.*.*error Source/{$d;N;d};P;D' Makefile && \
 	sed -i 's/install-k8s-code-generators:/install-k8s-code-generators.old:/g' Makefile && \
 	sed -i 's/install-gogo-protoc-gen:/install-gogo-protoc-gen.old:/g' Makefile && \
