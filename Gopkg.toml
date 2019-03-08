@@ -24,10 +24,19 @@
 #   go-tests = true
 #   unused-packages = true
 
+required=[ 
+	"github.com/gogo/googleapis/google/rpc", 
+	"github.com/gogo/googleapis/google/api" ,
+	"github.com/gogo/googleapis/protoc-gen-gogogoogleapis" 
+]
+#[[constraint]]
+#  branch = "master"
+#  name = "github.com/gogo/googleapis"
 
+# see https://github.com/kubernetes/client-go for the client-go version that matches the apimachinery version
 [[constraint]]
-  branch = "master"
-  name = "github.com/gogo/googleapis"
+  name= "k8s.io/client-go"
+  branch= "release-8.0"
 
 [[override]]
   name = "github.com/gogo/protobuf"

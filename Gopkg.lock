@@ -18,12 +18,16 @@
   version = "v1.0.0"
 
 [[projects]]
-  branch = "master"
   digest = "1:54d5c6a784a9de9c836fc070d51d0689c3e99ee6d24dba8a36f0762039dae830"
   name = "github.com/gogo/googleapis"
-  packages = ["google/rpc"]
+  packages = [
+    "google/api",
+    "google/rpc",
+    "protoc-gen-gogogoogleapis",
+  ]
   pruneopts = "T"
   revision = "8558fb44d2f1fc223118afc694129d2c2d2924d1"
+  version = "v1.1.0"
 
 [[projects]]
   digest = "1:b27ebd5d558fa6a7438b08142cc2885d223529956c008b15a56dc1e42cc8762d"
@@ -31,10 +35,31 @@
   packages = [
     "gogoproto",
     "jsonpb",
+    "plugin/compare",
+    "plugin/defaultcheck",
+    "plugin/description",
+    "plugin/embedcheck",
+    "plugin/enumstringer",
+    "plugin/equal",
+    "plugin/face",
+    "plugin/gostring",
+    "plugin/marshalto",
+    "plugin/oneofcheck",
+    "plugin/populate",
+    "plugin/size",
+    "plugin/stringer",
+    "plugin/testgen",
+    "plugin/union",
+    "plugin/unmarshal",
     "proto",
     "protoc-gen-gogo/descriptor",
+    "protoc-gen-gogo/generator",
+    "protoc-gen-gogo/grpc",
+    "protoc-gen-gogo/plugin",
     "sortkeys",
     "types",
+    "vanity",
+    "vanity/command",
   ]
   pruneopts = "T"
   revision = "1ef32a8b9fc3f8ec940126907cedb5998f6318e4"
@@ -176,14 +201,14 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:b9330878127150ca25239565bc4b297197e8c37d07ccbf9dff6b017b0a3bb67e"
+  digest = "1:a437736ca1ca08bd5d53dc8a7c2586993d4453d0707cf85e2f803151f6c1add3"
   name = "golang.org/x/sys"
   packages = [
     "unix",
     "windows",
   ]
   pruneopts = "NUT"
-  revision = "d455e41777fca6e8a5a79e34a14b8368bc11d9ba"
+  revision = "584f3b12f43e1e55248c90e84804777009eed0a4"
 
 [[projects]]
   digest = "1:e7071ed636b5422cc51c0e3a6cebc229d6c9fffc528814b519a980641422d619"
@@ -218,11 +243,11 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:077c1c599507b3b3e9156d17d36e1e61928ee9b53a5b420f10f28ebd4a0b275c"
+  digest = "1:c3076e7defee87de1236f1814beb588f40a75544c60121e6eb38b3b3721783e2"
   name = "google.golang.org/genproto"
   packages = ["googleapis/rpc/status"]
   pruneopts = "NUT"
-  revision = "4f5b463f9597cbe0dd13a6a2cd4f85e788d27508"
+  revision = "5fe7a883aa19554f42890211544aa549836af7b7"
 
 [[projects]]
   digest = "1:f2df7088cd31687fdce0f2eee853682416bf1e70baa487094913e3881f1f12f8"
@@ -281,8 +306,8 @@
   version = "v2.2.2"
 
 [[projects]]
-  branch = "release-1.13"
-  digest = "1:5f71dc9e7fd2680e355b2aa89a410103a3a2df3e14d6107191c28361381aaf88"
+  branch = "release-1.11"
+  digest = "1:b1c6723e934087c2fa159e1c6a309c3c5c0b9a7d209c2ba6028f21240ebe7606"
   name = "k8s.io/api"
   packages = [
     "admissionregistration/v1alpha1",
@@ -316,7 +341,7 @@
     "storage/v1beta1",
   ]
   pruneopts = "NUT"
-  revision = "5cb15d34447165a97c76ed5a60e4e99c8a01ecfe"
+  revision = "912cbe2bfef3d832db29f9d3125307fe907102e9"
 
 [[projects]]
   digest = "1:e2035d60919705a125feeb8b13926383aff8817634b2c4550743c19ca21f3b08"
@@ -369,7 +394,8 @@
   version = "kubernetes-1.11.2"
 
 [[projects]]
-  digest = "1:6fc5fe58b3444a72307dc231094e5164eee09576f24805b835bd4c03e3ad63fe"
+  branch = "release-8.0"
+  digest = "1:2eeecf157305fbd8289d3d8861674e35a34857a5e19595e5ced90c499e0a518f"
   name = "k8s.io/client-go"
   packages = [
     "discovery",
@@ -396,8 +422,7 @@
     "util/retry",
   ]
   pruneopts = "NUT"
-  revision = "7d04d0e2a0a1a4d4a1cd6baa432a2301492e4e65"
-  version = "v8.0.0"
+  revision = "4022682532b3b46b46a31b4c6150cbf55174cf0f"
 
 [[projects]]
   branch = "master"
@@ -405,13 +430,15 @@
   name = "k8s.io/kube-openapi"
   packages = ["pkg/util/proto"]
   pruneopts = "NUT"
-  revision = "b3a7cee44a305be0a69e1b9ac03018307287e1b0"
+  revision = "15615b16d372105f0c69ff47dfe7402926a65aaa"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
   input-imports = [
+    "github.com/gogo/googleapis/google/api",
     "github.com/gogo/googleapis/google/rpc",
+    "github.com/gogo/googleapis/protoc-gen-gogogoogleapis",
     "github.com/gogo/protobuf/gogoproto",
     "github.com/gogo/protobuf/jsonpb",
     "github.com/gogo/protobuf/proto",
