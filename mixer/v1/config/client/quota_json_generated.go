@@ -15,6 +15,28 @@ var _ = proto.Marshal
 var _ = fmt.Errorf
 var _ = math.Inf
 
+// MarshalJSON is a custom marshaler supporting oneof fields for QuotaSpec
+func (this *QuotaSpec) MarshalJSON() ([]byte, error) {
+	str, err := QuotaMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for QuotaSpec
+func (this *QuotaSpec) UnmarshalJSON(b []byte) error {
+	return QuotaUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
+// MarshalJSON is a custom marshaler supporting oneof fields for QuotaRule
+func (this *QuotaRule) MarshalJSON() ([]byte, error) {
+	str, err := QuotaMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for QuotaRule
+func (this *QuotaRule) UnmarshalJSON(b []byte) error {
+	return QuotaUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
 // MarshalJSON is a custom marshaler supporting oneof fields for StringMatch
 func (this *StringMatch) MarshalJSON() ([]byte, error) {
 	str, err := QuotaMarshaler.MarshalToString(this)
@@ -23,6 +45,61 @@ func (this *StringMatch) MarshalJSON() ([]byte, error) {
 
 // UnmarshalJSON is a custom unmarshaler supporting oneof fields for StringMatch
 func (this *StringMatch) UnmarshalJSON(b []byte) error {
+	return QuotaUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
+// MarshalJSON is a custom marshaler supporting oneof fields for AttributeMatch
+func (this *AttributeMatch) MarshalJSON() ([]byte, error) {
+	str, err := QuotaMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for AttributeMatch
+func (this *AttributeMatch) UnmarshalJSON(b []byte) error {
+	return QuotaUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
+// MarshalJSON is a custom marshaler supporting oneof fields for AttributeMatch_ClauseEntry
+func (this *AttributeMatch_ClauseEntry) MarshalJSON() ([]byte, error) {
+	str, err := QuotaMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for AttributeMatch_ClauseEntry
+func (this *AttributeMatch_ClauseEntry) UnmarshalJSON(b []byte) error {
+	return QuotaUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
+// MarshalJSON is a custom marshaler supporting oneof fields for Quota
+func (this *Quota) MarshalJSON() ([]byte, error) {
+	str, err := QuotaMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for Quota
+func (this *Quota) UnmarshalJSON(b []byte) error {
+	return QuotaUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
+// MarshalJSON is a custom marshaler supporting oneof fields for QuotaSpecBinding
+func (this *QuotaSpecBinding) MarshalJSON() ([]byte, error) {
+	str, err := QuotaMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for QuotaSpecBinding
+func (this *QuotaSpecBinding) UnmarshalJSON(b []byte) error {
+	return QuotaUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
+// MarshalJSON is a custom marshaler supporting oneof fields for QuotaSpecBinding_QuotaSpecReference
+func (this *QuotaSpecBinding_QuotaSpecReference) MarshalJSON() ([]byte, error) {
+	str, err := QuotaMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for QuotaSpecBinding_QuotaSpecReference
+func (this *QuotaSpecBinding_QuotaSpecReference) UnmarshalJSON(b []byte) error {
 	return QuotaUnmarshaler.Unmarshal(bytes.NewReader(b), this)
 }
 

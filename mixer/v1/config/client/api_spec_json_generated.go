@@ -16,6 +16,17 @@ var _ = proto.Marshal
 var _ = fmt.Errorf
 var _ = math.Inf
 
+// MarshalJSON is a custom marshaler supporting oneof fields for HTTPAPISpec
+func (this *HTTPAPISpec) MarshalJSON() ([]byte, error) {
+	str, err := ApiSpecMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for HTTPAPISpec
+func (this *HTTPAPISpec) UnmarshalJSON(b []byte) error {
+	return ApiSpecUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
 // MarshalJSON is a custom marshaler supporting oneof fields for HTTPAPISpecPattern
 func (this *HTTPAPISpecPattern) MarshalJSON() ([]byte, error) {
 	str, err := ApiSpecMarshaler.MarshalToString(this)
@@ -35,6 +46,28 @@ func (this *APIKey) MarshalJSON() ([]byte, error) {
 
 // UnmarshalJSON is a custom unmarshaler supporting oneof fields for APIKey
 func (this *APIKey) UnmarshalJSON(b []byte) error {
+	return ApiSpecUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
+// MarshalJSON is a custom marshaler supporting oneof fields for HTTPAPISpecReference
+func (this *HTTPAPISpecReference) MarshalJSON() ([]byte, error) {
+	str, err := ApiSpecMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for HTTPAPISpecReference
+func (this *HTTPAPISpecReference) UnmarshalJSON(b []byte) error {
+	return ApiSpecUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
+// MarshalJSON is a custom marshaler supporting oneof fields for HTTPAPISpecBinding
+func (this *HTTPAPISpecBinding) MarshalJSON() ([]byte, error) {
+	str, err := ApiSpecMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for HTTPAPISpecBinding
+func (this *HTTPAPISpecBinding) UnmarshalJSON(b []byte) error {
 	return ApiSpecUnmarshaler.Unmarshal(bytes.NewReader(b), this)
 }
 
