@@ -16,61 +16,6 @@ var _ = proto.Marshal
 var _ = fmt.Errorf
 var _ = math.Inf
 
-// MarshalJSON is a custom marshaler supporting oneof fields for DestinationRule
-func (this *DestinationRule) MarshalJSON() ([]byte, error) {
-	str, err := DestinationRuleMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for DestinationRule
-func (this *DestinationRule) UnmarshalJSON(b []byte) error {
-	return DestinationRuleUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for TrafficPolicy
-func (this *TrafficPolicy) MarshalJSON() ([]byte, error) {
-	str, err := DestinationRuleMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for TrafficPolicy
-func (this *TrafficPolicy) UnmarshalJSON(b []byte) error {
-	return DestinationRuleUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for TrafficPolicy_PortTrafficPolicy
-func (this *TrafficPolicy_PortTrafficPolicy) MarshalJSON() ([]byte, error) {
-	str, err := DestinationRuleMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for TrafficPolicy_PortTrafficPolicy
-func (this *TrafficPolicy_PortTrafficPolicy) UnmarshalJSON(b []byte) error {
-	return DestinationRuleUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for Subset
-func (this *Subset) MarshalJSON() ([]byte, error) {
-	str, err := DestinationRuleMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for Subset
-func (this *Subset) UnmarshalJSON(b []byte) error {
-	return DestinationRuleUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for Subset_LabelsEntry
-func (this *Subset_LabelsEntry) MarshalJSON() ([]byte, error) {
-	str, err := DestinationRuleMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for Subset_LabelsEntry
-func (this *Subset_LabelsEntry) UnmarshalJSON(b []byte) error {
-	return DestinationRuleUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
 // MarshalJSON is a custom marshaler supporting oneof fields for LoadBalancerSettings
 func (this *LoadBalancerSettings) MarshalJSON() ([]byte, error) {
 	str, err := DestinationRuleMarshaler.MarshalToString(this)
@@ -90,72 +35,6 @@ func (this *LoadBalancerSettings_ConsistentHashLB) MarshalJSON() ([]byte, error)
 
 // UnmarshalJSON is a custom unmarshaler supporting oneof fields for LoadBalancerSettings_ConsistentHashLB
 func (this *LoadBalancerSettings_ConsistentHashLB) UnmarshalJSON(b []byte) error {
-	return DestinationRuleUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for LoadBalancerSettings_ConsistentHashLB_HTTPCookie
-func (this *LoadBalancerSettings_ConsistentHashLB_HTTPCookie) MarshalJSON() ([]byte, error) {
-	str, err := DestinationRuleMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for LoadBalancerSettings_ConsistentHashLB_HTTPCookie
-func (this *LoadBalancerSettings_ConsistentHashLB_HTTPCookie) UnmarshalJSON(b []byte) error {
-	return DestinationRuleUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for ConnectionPoolSettings
-func (this *ConnectionPoolSettings) MarshalJSON() ([]byte, error) {
-	str, err := DestinationRuleMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for ConnectionPoolSettings
-func (this *ConnectionPoolSettings) UnmarshalJSON(b []byte) error {
-	return DestinationRuleUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for ConnectionPoolSettings_TCPSettings
-func (this *ConnectionPoolSettings_TCPSettings) MarshalJSON() ([]byte, error) {
-	str, err := DestinationRuleMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for ConnectionPoolSettings_TCPSettings
-func (this *ConnectionPoolSettings_TCPSettings) UnmarshalJSON(b []byte) error {
-	return DestinationRuleUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for ConnectionPoolSettings_TCPSettings_TcpKeepalive
-func (this *ConnectionPoolSettings_TCPSettings_TcpKeepalive) MarshalJSON() ([]byte, error) {
-	str, err := DestinationRuleMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for ConnectionPoolSettings_TCPSettings_TcpKeepalive
-func (this *ConnectionPoolSettings_TCPSettings_TcpKeepalive) UnmarshalJSON(b []byte) error {
-	return DestinationRuleUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for ConnectionPoolSettings_HTTPSettings
-func (this *ConnectionPoolSettings_HTTPSettings) MarshalJSON() ([]byte, error) {
-	str, err := DestinationRuleMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for ConnectionPoolSettings_HTTPSettings
-func (this *ConnectionPoolSettings_HTTPSettings) UnmarshalJSON(b []byte) error {
-	return DestinationRuleUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for OutlierDetection
-func (this *OutlierDetection) MarshalJSON() ([]byte, error) {
-	str, err := DestinationRuleMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for OutlierDetection
-func (this *OutlierDetection) UnmarshalJSON(b []byte) error {
 	return DestinationRuleUnmarshaler.Unmarshal(bytes.NewReader(b), this)
 }
 

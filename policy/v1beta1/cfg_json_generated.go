@@ -16,50 +16,6 @@ var _ = proto.Marshal
 var _ = fmt.Errorf
 var _ = math.Inf
 
-// MarshalJSON is a custom marshaler supporting oneof fields for AttributeManifest
-func (this *AttributeManifest) MarshalJSON() ([]byte, error) {
-	str, err := CfgMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for AttributeManifest
-func (this *AttributeManifest) UnmarshalJSON(b []byte) error {
-	return CfgUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for AttributeManifest_AttributeInfo
-func (this *AttributeManifest_AttributeInfo) MarshalJSON() ([]byte, error) {
-	str, err := CfgMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for AttributeManifest_AttributeInfo
-func (this *AttributeManifest_AttributeInfo) UnmarshalJSON(b []byte) error {
-	return CfgUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for AttributeManifest_AttributesEntry
-func (this *AttributeManifest_AttributesEntry) MarshalJSON() ([]byte, error) {
-	str, err := CfgMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for AttributeManifest_AttributesEntry
-func (this *AttributeManifest_AttributesEntry) UnmarshalJSON(b []byte) error {
-	return CfgUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for Rule
-func (this *Rule) MarshalJSON() ([]byte, error) {
-	str, err := CfgMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for Rule
-func (this *Rule) UnmarshalJSON(b []byte) error {
-	return CfgUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
 // MarshalJSON is a custom marshaler supporting oneof fields for Rule_HeaderOperationTemplate
 func (this *Rule_HeaderOperationTemplate) MarshalJSON() ([]byte, error) {
 	str, err := CfgMarshaler.MarshalToString(this)
@@ -68,94 +24,6 @@ func (this *Rule_HeaderOperationTemplate) MarshalJSON() ([]byte, error) {
 
 // UnmarshalJSON is a custom unmarshaler supporting oneof fields for Rule_HeaderOperationTemplate
 func (this *Rule_HeaderOperationTemplate) UnmarshalJSON(b []byte) error {
-	return CfgUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for Action
-func (this *Action) MarshalJSON() ([]byte, error) {
-	str, err := CfgMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for Action
-func (this *Action) UnmarshalJSON(b []byte) error {
-	return CfgUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for Instance
-func (this *Instance) MarshalJSON() ([]byte, error) {
-	str, err := CfgMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for Instance
-func (this *Instance) UnmarshalJSON(b []byte) error {
-	return CfgUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for Instance_AttributeBindingsEntry
-func (this *Instance_AttributeBindingsEntry) MarshalJSON() ([]byte, error) {
-	str, err := CfgMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for Instance_AttributeBindingsEntry
-func (this *Instance_AttributeBindingsEntry) UnmarshalJSON(b []byte) error {
-	return CfgUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for Handler
-func (this *Handler) MarshalJSON() ([]byte, error) {
-	str, err := CfgMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for Handler
-func (this *Handler) UnmarshalJSON(b []byte) error {
-	return CfgUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for Connection
-func (this *Connection) MarshalJSON() ([]byte, error) {
-	str, err := CfgMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for Connection
-func (this *Connection) UnmarshalJSON(b []byte) error {
-	return CfgUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for Sampling
-func (this *Sampling) MarshalJSON() ([]byte, error) {
-	str, err := CfgMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for Sampling
-func (this *Sampling) UnmarshalJSON(b []byte) error {
-	return CfgUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for RandomSampling
-func (this *RandomSampling) MarshalJSON() ([]byte, error) {
-	str, err := CfgMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for RandomSampling
-func (this *RandomSampling) UnmarshalJSON(b []byte) error {
-	return CfgUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for RateLimitSampling
-func (this *RateLimitSampling) MarshalJSON() ([]byte, error) {
-	str, err := CfgMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for RateLimitSampling
-func (this *RateLimitSampling) UnmarshalJSON(b []byte) error {
 	return CfgUnmarshaler.Unmarshal(bytes.NewReader(b), this)
 }
 
@@ -189,39 +57,6 @@ func (this *Tls) MarshalJSON() ([]byte, error) {
 
 // UnmarshalJSON is a custom unmarshaler supporting oneof fields for Tls
 func (this *Tls) UnmarshalJSON(b []byte) error {
-	return CfgUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for OAuth
-func (this *OAuth) MarshalJSON() ([]byte, error) {
-	str, err := CfgMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for OAuth
-func (this *OAuth) UnmarshalJSON(b []byte) error {
-	return CfgUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for OAuth_EndpointParamsEntry
-func (this *OAuth_EndpointParamsEntry) MarshalJSON() ([]byte, error) {
-	str, err := CfgMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for OAuth_EndpointParamsEntry
-func (this *OAuth_EndpointParamsEntry) UnmarshalJSON(b []byte) error {
-	return CfgUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for Mutual
-func (this *Mutual) MarshalJSON() ([]byte, error) {
-	str, err := CfgMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for Mutual
-func (this *Mutual) UnmarshalJSON(b []byte) error {
 	return CfgUnmarshaler.Unmarshal(bytes.NewReader(b), this)
 }
 

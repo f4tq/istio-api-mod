@@ -15,28 +15,6 @@ var _ = proto.Marshal
 var _ = fmt.Errorf
 var _ = math.Inf
 
-// MarshalJSON is a custom marshaler supporting oneof fields for EnvoyFilter
-func (this *EnvoyFilter) MarshalJSON() ([]byte, error) {
-	str, err := EnvoyFilterMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for EnvoyFilter
-func (this *EnvoyFilter) UnmarshalJSON(b []byte) error {
-	return EnvoyFilterUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for EnvoyFilter_WorkloadLabelsEntry
-func (this *EnvoyFilter_WorkloadLabelsEntry) MarshalJSON() ([]byte, error) {
-	str, err := EnvoyFilterMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for EnvoyFilter_WorkloadLabelsEntry
-func (this *EnvoyFilter_WorkloadLabelsEntry) UnmarshalJSON(b []byte) error {
-	return EnvoyFilterUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
 // MarshalJSON is a custom marshaler supporting oneof fields for EnvoyFilter_ListenerMatch
 func (this *EnvoyFilter_ListenerMatch) MarshalJSON() ([]byte, error) {
 	str, err := EnvoyFilterMarshaler.MarshalToString(this)

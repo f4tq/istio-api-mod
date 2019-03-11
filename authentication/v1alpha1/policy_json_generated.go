@@ -40,28 +40,6 @@ func (this *MutualTls) UnmarshalJSON(b []byte) error {
 	return PolicyUnmarshaler.Unmarshal(bytes.NewReader(b), this)
 }
 
-// MarshalJSON is a custom marshaler supporting oneof fields for Jwt
-func (this *Jwt) MarshalJSON() ([]byte, error) {
-	str, err := PolicyMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for Jwt
-func (this *Jwt) UnmarshalJSON(b []byte) error {
-	return PolicyUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for Jwt_TriggerRule
-func (this *Jwt_TriggerRule) MarshalJSON() ([]byte, error) {
-	str, err := PolicyMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for Jwt_TriggerRule
-func (this *Jwt_TriggerRule) UnmarshalJSON(b []byte) error {
-	return PolicyUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
 // MarshalJSON is a custom marshaler supporting oneof fields for PeerAuthenticationMethod
 func (this *PeerAuthenticationMethod) MarshalJSON() ([]byte, error) {
 	str, err := PolicyMarshaler.MarshalToString(this)
@@ -70,50 +48,6 @@ func (this *PeerAuthenticationMethod) MarshalJSON() ([]byte, error) {
 
 // UnmarshalJSON is a custom unmarshaler supporting oneof fields for PeerAuthenticationMethod
 func (this *PeerAuthenticationMethod) UnmarshalJSON(b []byte) error {
-	return PolicyUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for OriginAuthenticationMethod
-func (this *OriginAuthenticationMethod) MarshalJSON() ([]byte, error) {
-	str, err := PolicyMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for OriginAuthenticationMethod
-func (this *OriginAuthenticationMethod) UnmarshalJSON(b []byte) error {
-	return PolicyUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for Policy
-func (this *Policy) MarshalJSON() ([]byte, error) {
-	str, err := PolicyMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for Policy
-func (this *Policy) UnmarshalJSON(b []byte) error {
-	return PolicyUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for TargetSelector
-func (this *TargetSelector) MarshalJSON() ([]byte, error) {
-	str, err := PolicyMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for TargetSelector
-func (this *TargetSelector) UnmarshalJSON(b []byte) error {
-	return PolicyUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for TargetSelector_LabelsEntry
-func (this *TargetSelector_LabelsEntry) MarshalJSON() ([]byte, error) {
-	str, err := PolicyMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for TargetSelector_LabelsEntry
-func (this *TargetSelector_LabelsEntry) UnmarshalJSON(b []byte) error {
 	return PolicyUnmarshaler.Unmarshal(bytes.NewReader(b), this)
 }
 

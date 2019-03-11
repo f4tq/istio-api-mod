@@ -22,83 +22,6 @@ var _ = proto.Marshal
 var _ = fmt.Errorf
 var _ = math.Inf
 
-// MarshalJSON is a custom marshaler supporting oneof fields for CheckRequest
-func (this *CheckRequest) MarshalJSON() ([]byte, error) {
-	str, err := MixerMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for CheckRequest
-func (this *CheckRequest) UnmarshalJSON(b []byte) error {
-	return MixerUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for CheckRequest_QuotaParams
-func (this *CheckRequest_QuotaParams) MarshalJSON() ([]byte, error) {
-	str, err := MixerMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for CheckRequest_QuotaParams
-func (this *CheckRequest_QuotaParams) UnmarshalJSON(b []byte) error {
-	return MixerUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for CheckRequest_QuotasEntry
-func (this *CheckRequest_QuotasEntry) MarshalJSON() ([]byte, error) {
-	str, err := MixerMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for CheckRequest_QuotasEntry
-func (this *CheckRequest_QuotasEntry) UnmarshalJSON(b []byte) error {
-	return MixerUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for CheckResponse
-func (this *CheckResponse) MarshalJSON() ([]byte, error) {
-	str, err := MixerMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for CheckResponse
-func (this *CheckResponse) UnmarshalJSON(b []byte) error {
-	return MixerUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for CheckResponse_PreconditionResult
-func (this *CheckResponse_PreconditionResult) MarshalJSON() ([]byte, error) {
-	str, err := MixerMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for CheckResponse_PreconditionResult
-func (this *CheckResponse_PreconditionResult) UnmarshalJSON(b []byte) error {
-	return MixerUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for CheckResponse_QuotaResult
-func (this *CheckResponse_QuotaResult) MarshalJSON() ([]byte, error) {
-	str, err := MixerMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for CheckResponse_QuotaResult
-func (this *CheckResponse_QuotaResult) UnmarshalJSON(b []byte) error {
-	return MixerUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for CheckResponse_QuotasEntry
-func (this *CheckResponse_QuotasEntry) MarshalJSON() ([]byte, error) {
-	str, err := MixerMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for CheckResponse_QuotasEntry
-func (this *CheckResponse_QuotasEntry) UnmarshalJSON(b []byte) error {
-	return MixerUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
 // MarshalJSON is a custom marshaler supporting oneof fields for ReferencedAttributes
 func (this *ReferencedAttributes) MarshalJSON() ([]byte, error) {
 	str, err := MixerMarshaler.MarshalToString(this)
@@ -110,17 +33,6 @@ func (this *ReferencedAttributes) UnmarshalJSON(b []byte) error {
 	return MixerUnmarshaler.Unmarshal(bytes.NewReader(b), this)
 }
 
-// MarshalJSON is a custom marshaler supporting oneof fields for ReferencedAttributes_AttributeMatch
-func (this *ReferencedAttributes_AttributeMatch) MarshalJSON() ([]byte, error) {
-	str, err := MixerMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for ReferencedAttributes_AttributeMatch
-func (this *ReferencedAttributes_AttributeMatch) UnmarshalJSON(b []byte) error {
-	return MixerUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
 // MarshalJSON is a custom marshaler supporting oneof fields for HeaderOperation
 func (this *HeaderOperation) MarshalJSON() ([]byte, error) {
 	str, err := MixerMarshaler.MarshalToString(this)
@@ -129,39 +41,6 @@ func (this *HeaderOperation) MarshalJSON() ([]byte, error) {
 
 // UnmarshalJSON is a custom unmarshaler supporting oneof fields for HeaderOperation
 func (this *HeaderOperation) UnmarshalJSON(b []byte) error {
-	return MixerUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for RouteDirective
-func (this *RouteDirective) MarshalJSON() ([]byte, error) {
-	str, err := MixerMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for RouteDirective
-func (this *RouteDirective) UnmarshalJSON(b []byte) error {
-	return MixerUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for ReportRequest
-func (this *ReportRequest) MarshalJSON() ([]byte, error) {
-	str, err := MixerMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for ReportRequest
-func (this *ReportRequest) UnmarshalJSON(b []byte) error {
-	return MixerUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for ReportResponse
-func (this *ReportResponse) MarshalJSON() ([]byte, error) {
-	str, err := MixerMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for ReportResponse
-func (this *ReportResponse) UnmarshalJSON(b []byte) error {
 	return MixerUnmarshaler.Unmarshal(bytes.NewReader(b), this)
 }
 

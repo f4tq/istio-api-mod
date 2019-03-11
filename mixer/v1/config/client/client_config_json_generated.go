@@ -28,61 +28,6 @@ func (this *NetworkFailPolicy) UnmarshalJSON(b []byte) error {
 	return ClientConfigUnmarshaler.Unmarshal(bytes.NewReader(b), this)
 }
 
-// MarshalJSON is a custom marshaler supporting oneof fields for ServiceConfig
-func (this *ServiceConfig) MarshalJSON() ([]byte, error) {
-	str, err := ClientConfigMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for ServiceConfig
-func (this *ServiceConfig) UnmarshalJSON(b []byte) error {
-	return ClientConfigUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for TransportConfig
-func (this *TransportConfig) MarshalJSON() ([]byte, error) {
-	str, err := ClientConfigMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for TransportConfig
-func (this *TransportConfig) UnmarshalJSON(b []byte) error {
-	return ClientConfigUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for HttpClientConfig
-func (this *HttpClientConfig) MarshalJSON() ([]byte, error) {
-	str, err := ClientConfigMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for HttpClientConfig
-func (this *HttpClientConfig) UnmarshalJSON(b []byte) error {
-	return ClientConfigUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for HttpClientConfig_ServiceConfigsEntry
-func (this *HttpClientConfig_ServiceConfigsEntry) MarshalJSON() ([]byte, error) {
-	str, err := ClientConfigMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for HttpClientConfig_ServiceConfigsEntry
-func (this *HttpClientConfig_ServiceConfigsEntry) UnmarshalJSON(b []byte) error {
-	return ClientConfigUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for TcpClientConfig
-func (this *TcpClientConfig) MarshalJSON() ([]byte, error) {
-	str, err := ClientConfigMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for TcpClientConfig
-func (this *TcpClientConfig) UnmarshalJSON(b []byte) error {
-	return ClientConfigUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
 var (
 	ClientConfigMarshaler   = &github_com_gogo_protobuf_jsonpb.Marshaler{}
 	ClientConfigUnmarshaler = &github_com_gogo_protobuf_jsonpb.Unmarshaler{}

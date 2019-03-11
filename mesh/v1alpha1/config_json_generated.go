@@ -38,61 +38,6 @@ func (this *MeshConfig_OutboundTrafficPolicy) UnmarshalJSON(b []byte) error {
 	return ConfigUnmarshaler.Unmarshal(bytes.NewReader(b), this)
 }
 
-// MarshalJSON is a custom marshaler supporting oneof fields for ConfigSource
-func (this *ConfigSource) MarshalJSON() ([]byte, error) {
-	str, err := ConfigMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for ConfigSource
-func (this *ConfigSource) UnmarshalJSON(b []byte) error {
-	return ConfigUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for LocalityLoadBalancerSetting
-func (this *LocalityLoadBalancerSetting) MarshalJSON() ([]byte, error) {
-	str, err := ConfigMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for LocalityLoadBalancerSetting
-func (this *LocalityLoadBalancerSetting) UnmarshalJSON(b []byte) error {
-	return ConfigUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for LocalityLoadBalancerSetting_Distribute
-func (this *LocalityLoadBalancerSetting_Distribute) MarshalJSON() ([]byte, error) {
-	str, err := ConfigMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for LocalityLoadBalancerSetting_Distribute
-func (this *LocalityLoadBalancerSetting_Distribute) UnmarshalJSON(b []byte) error {
-	return ConfigUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for LocalityLoadBalancerSetting_Distribute_ToEntry
-func (this *LocalityLoadBalancerSetting_Distribute_ToEntry) MarshalJSON() ([]byte, error) {
-	str, err := ConfigMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for LocalityLoadBalancerSetting_Distribute_ToEntry
-func (this *LocalityLoadBalancerSetting_Distribute_ToEntry) UnmarshalJSON(b []byte) error {
-	return ConfigUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for LocalityLoadBalancerSetting_Failover
-func (this *LocalityLoadBalancerSetting_Failover) MarshalJSON() ([]byte, error) {
-	str, err := ConfigMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for LocalityLoadBalancerSetting_Failover
-func (this *LocalityLoadBalancerSetting_Failover) UnmarshalJSON(b []byte) error {
-	return ConfigUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
 var (
 	ConfigMarshaler   = &github_com_gogo_protobuf_jsonpb.Marshaler{}
 	ConfigUnmarshaler = &github_com_gogo_protobuf_jsonpb.Unmarshaler{}

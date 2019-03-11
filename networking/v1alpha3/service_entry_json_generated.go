@@ -25,39 +25,6 @@ func (this *ServiceEntry) UnmarshalJSON(b []byte) error {
 	return ServiceEntryUnmarshaler.Unmarshal(bytes.NewReader(b), this)
 }
 
-// MarshalJSON is a custom marshaler supporting oneof fields for ServiceEntry_Endpoint
-func (this *ServiceEntry_Endpoint) MarshalJSON() ([]byte, error) {
-	str, err := ServiceEntryMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for ServiceEntry_Endpoint
-func (this *ServiceEntry_Endpoint) UnmarshalJSON(b []byte) error {
-	return ServiceEntryUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for ServiceEntry_Endpoint_PortsEntry
-func (this *ServiceEntry_Endpoint_PortsEntry) MarshalJSON() ([]byte, error) {
-	str, err := ServiceEntryMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for ServiceEntry_Endpoint_PortsEntry
-func (this *ServiceEntry_Endpoint_PortsEntry) UnmarshalJSON(b []byte) error {
-	return ServiceEntryUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for ServiceEntry_Endpoint_LabelsEntry
-func (this *ServiceEntry_Endpoint_LabelsEntry) MarshalJSON() ([]byte, error) {
-	str, err := ServiceEntryMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for ServiceEntry_Endpoint_LabelsEntry
-func (this *ServiceEntry_Endpoint_LabelsEntry) UnmarshalJSON(b []byte) error {
-	return ServiceEntryUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
 var (
 	ServiceEntryMarshaler   = &github_com_gogo_protobuf_jsonpb.Marshaler{}
 	ServiceEntryUnmarshaler = &github_com_gogo_protobuf_jsonpb.Unmarshaler{}

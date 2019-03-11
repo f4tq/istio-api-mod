@@ -14,17 +14,6 @@ var _ = proto.Marshal
 var _ = fmt.Errorf
 var _ = math.Inf
 
-// MarshalJSON is a custom marshaler supporting oneof fields for Network
-func (this *Network) MarshalJSON() ([]byte, error) {
-	str, err := NetworkMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for Network
-func (this *Network) UnmarshalJSON(b []byte) error {
-	return NetworkUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
 // MarshalJSON is a custom marshaler supporting oneof fields for Network_NetworkEndpoints
 func (this *Network_NetworkEndpoints) MarshalJSON() ([]byte, error) {
 	str, err := NetworkMarshaler.MarshalToString(this)
@@ -44,28 +33,6 @@ func (this *Network_IstioNetworkGateway) MarshalJSON() ([]byte, error) {
 
 // UnmarshalJSON is a custom unmarshaler supporting oneof fields for Network_IstioNetworkGateway
 func (this *Network_IstioNetworkGateway) UnmarshalJSON(b []byte) error {
-	return NetworkUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for MeshNetworks
-func (this *MeshNetworks) MarshalJSON() ([]byte, error) {
-	str, err := NetworkMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for MeshNetworks
-func (this *MeshNetworks) UnmarshalJSON(b []byte) error {
-	return NetworkUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for MeshNetworks_NetworksEntry
-func (this *MeshNetworks_NetworksEntry) MarshalJSON() ([]byte, error) {
-	str, err := NetworkMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for MeshNetworks_NetworksEntry
-func (this *MeshNetworks_NetworksEntry) UnmarshalJSON(b []byte) error {
 	return NetworkUnmarshaler.Unmarshal(bytes.NewReader(b), this)
 }
 

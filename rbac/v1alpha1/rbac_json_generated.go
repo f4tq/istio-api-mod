@@ -79,116 +79,6 @@ var _ = proto.Marshal
 var _ = fmt.Errorf
 var _ = math.Inf
 
-// MarshalJSON is a custom marshaler supporting oneof fields for WorkloadSelector
-func (this *WorkloadSelector) MarshalJSON() ([]byte, error) {
-	str, err := RbacMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for WorkloadSelector
-func (this *WorkloadSelector) UnmarshalJSON(b []byte) error {
-	return RbacUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for WorkloadSelector_LabelsEntry
-func (this *WorkloadSelector_LabelsEntry) MarshalJSON() ([]byte, error) {
-	str, err := RbacMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for WorkloadSelector_LabelsEntry
-func (this *WorkloadSelector_LabelsEntry) UnmarshalJSON(b []byte) error {
-	return RbacUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for AuthorizationPolicy
-func (this *AuthorizationPolicy) MarshalJSON() ([]byte, error) {
-	str, err := RbacMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for AuthorizationPolicy
-func (this *AuthorizationPolicy) UnmarshalJSON(b []byte) error {
-	return RbacUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for ServiceRole
-func (this *ServiceRole) MarshalJSON() ([]byte, error) {
-	str, err := RbacMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for ServiceRole
-func (this *ServiceRole) UnmarshalJSON(b []byte) error {
-	return RbacUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for AccessRule
-func (this *AccessRule) MarshalJSON() ([]byte, error) {
-	str, err := RbacMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for AccessRule
-func (this *AccessRule) UnmarshalJSON(b []byte) error {
-	return RbacUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for AccessRule_Constraint
-func (this *AccessRule_Constraint) MarshalJSON() ([]byte, error) {
-	str, err := RbacMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for AccessRule_Constraint
-func (this *AccessRule_Constraint) UnmarshalJSON(b []byte) error {
-	return RbacUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for ServiceRoleBinding
-func (this *ServiceRoleBinding) MarshalJSON() ([]byte, error) {
-	str, err := RbacMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for ServiceRoleBinding
-func (this *ServiceRoleBinding) UnmarshalJSON(b []byte) error {
-	return RbacUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for Subject
-func (this *Subject) MarshalJSON() ([]byte, error) {
-	str, err := RbacMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for Subject
-func (this *Subject) UnmarshalJSON(b []byte) error {
-	return RbacUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for Subject_PropertiesEntry
-func (this *Subject_PropertiesEntry) MarshalJSON() ([]byte, error) {
-	str, err := RbacMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for Subject_PropertiesEntry
-func (this *Subject_PropertiesEntry) UnmarshalJSON(b []byte) error {
-	return RbacUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for RoleRef
-func (this *RoleRef) MarshalJSON() ([]byte, error) {
-	str, err := RbacMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for RoleRef
-func (this *RoleRef) UnmarshalJSON(b []byte) error {
-	return RbacUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
 // MarshalJSON is a custom marshaler supporting oneof fields for RbacConfig
 func (this *RbacConfig) MarshalJSON() ([]byte, error) {
 	str, err := RbacMarshaler.MarshalToString(this)
@@ -197,17 +87,6 @@ func (this *RbacConfig) MarshalJSON() ([]byte, error) {
 
 // UnmarshalJSON is a custom unmarshaler supporting oneof fields for RbacConfig
 func (this *RbacConfig) UnmarshalJSON(b []byte) error {
-	return RbacUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for RbacConfig_Target
-func (this *RbacConfig_Target) MarshalJSON() ([]byte, error) {
-	str, err := RbacMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for RbacConfig_Target
-func (this *RbacConfig_Target) UnmarshalJSON(b []byte) error {
 	return RbacUnmarshaler.Unmarshal(bytes.NewReader(b), this)
 }
 

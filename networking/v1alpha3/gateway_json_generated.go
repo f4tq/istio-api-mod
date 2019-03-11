@@ -14,39 +14,6 @@ var _ = proto.Marshal
 var _ = fmt.Errorf
 var _ = math.Inf
 
-// MarshalJSON is a custom marshaler supporting oneof fields for Gateway
-func (this *Gateway) MarshalJSON() ([]byte, error) {
-	str, err := GatewayMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for Gateway
-func (this *Gateway) UnmarshalJSON(b []byte) error {
-	return GatewayUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for Gateway_SelectorEntry
-func (this *Gateway_SelectorEntry) MarshalJSON() ([]byte, error) {
-	str, err := GatewayMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for Gateway_SelectorEntry
-func (this *Gateway_SelectorEntry) UnmarshalJSON(b []byte) error {
-	return GatewayUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for Server
-func (this *Server) MarshalJSON() ([]byte, error) {
-	str, err := GatewayMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for Server
-func (this *Server) UnmarshalJSON(b []byte) error {
-	return GatewayUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
 // MarshalJSON is a custom marshaler supporting oneof fields for Server_TLSOptions
 func (this *Server_TLSOptions) MarshalJSON() ([]byte, error) {
 	str, err := GatewayMarshaler.MarshalToString(this)
@@ -55,17 +22,6 @@ func (this *Server_TLSOptions) MarshalJSON() ([]byte, error) {
 
 // UnmarshalJSON is a custom unmarshaler supporting oneof fields for Server_TLSOptions
 func (this *Server_TLSOptions) UnmarshalJSON(b []byte) error {
-	return GatewayUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
-// MarshalJSON is a custom marshaler supporting oneof fields for Port
-func (this *Port) MarshalJSON() ([]byte, error) {
-	str, err := GatewayMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for Port
-func (this *Port) UnmarshalJSON(b []byte) error {
 	return GatewayUnmarshaler.Unmarshal(bytes.NewReader(b), this)
 }
 
