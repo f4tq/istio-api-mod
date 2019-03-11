@@ -26,6 +26,17 @@ func (this *Tracing) UnmarshalJSON(b []byte) error {
 	return ProxyUnmarshaler.Unmarshal(bytes.NewReader(b), this)
 }
 
+// MarshalJSON is a custom marshaler supporting oneof fields for ProxyConfig
+func (this *ProxyConfig) MarshalJSON() ([]byte, error) {
+	str, err := ProxyMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for ProxyConfig
+func (this *ProxyConfig) UnmarshalJSON(b []byte) error {
+	return ProxyUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
 var (
 	ProxyMarshaler   = &github_com_gogo_protobuf_jsonpb.Marshaler{}
 	ProxyUnmarshaler = &github_com_gogo_protobuf_jsonpb.Unmarshaler{}

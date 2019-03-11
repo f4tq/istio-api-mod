@@ -29,6 +29,17 @@ func (this *StringMatch) UnmarshalJSON(b []byte) error {
 	return PolicyUnmarshaler.Unmarshal(bytes.NewReader(b), this)
 }
 
+// MarshalJSON is a custom marshaler supporting oneof fields for MutualTls
+func (this *MutualTls) MarshalJSON() ([]byte, error) {
+	str, err := PolicyMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for MutualTls
+func (this *MutualTls) UnmarshalJSON(b []byte) error {
+	return PolicyUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
 // MarshalJSON is a custom marshaler supporting oneof fields for PeerAuthenticationMethod
 func (this *PeerAuthenticationMethod) MarshalJSON() ([]byte, error) {
 	str, err := PolicyMarshaler.MarshalToString(this)

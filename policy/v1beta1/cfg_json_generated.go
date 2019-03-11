@@ -16,6 +16,28 @@ var _ = proto.Marshal
 var _ = fmt.Errorf
 var _ = math.Inf
 
+// MarshalJSON is a custom marshaler supporting oneof fields for Rule_HeaderOperationTemplate
+func (this *Rule_HeaderOperationTemplate) MarshalJSON() ([]byte, error) {
+	str, err := CfgMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for Rule_HeaderOperationTemplate
+func (this *Rule_HeaderOperationTemplate) UnmarshalJSON(b []byte) error {
+	return CfgUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
+// MarshalJSON is a custom marshaler supporting oneof fields for FractionalPercent
+func (this *FractionalPercent) MarshalJSON() ([]byte, error) {
+	str, err := CfgMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for FractionalPercent
+func (this *FractionalPercent) UnmarshalJSON(b []byte) error {
+	return CfgUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
 // MarshalJSON is a custom marshaler supporting oneof fields for Authentication
 func (this *Authentication) MarshalJSON() ([]byte, error) {
 	str, err := CfgMarshaler.MarshalToString(this)
