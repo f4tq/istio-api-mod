@@ -3,7 +3,7 @@ makefile_dir := $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 current_dir := $(shell pwd)
 
 # istio-api source
-src_pkg:='https://github.com/rcernich/istio-api.git'
+src_pkg:='https://github.com/f4tq/istio-api.git'
 src_branch:=istio-8772
 
 
