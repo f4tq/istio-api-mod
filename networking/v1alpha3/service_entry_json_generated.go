@@ -14,6 +14,8 @@ var _ = proto.Marshal
 var _ = fmt.Errorf
 var _ = math.Inf
 
+// message: ServiceEntry
+// Generating Marshal for message: ServiceEntry
 // MarshalJSON is a custom marshaler supporting oneof fields for ServiceEntry
 func (this *ServiceEntry) MarshalJSON() ([]byte, error) {
 	str, err := ServiceEntryMarshaler.MarshalToString(this)
@@ -25,6 +27,19 @@ func (this *ServiceEntry) UnmarshalJSON(b []byte) error {
 	return ServiceEntryUnmarshaler.Unmarshal(bytes.NewReader(b), this)
 }
 
+// message: Endpoint
+// fieldName name:"address" number:1 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"address"
+// fieldName name:"ports" number:2 label:LABEL_REPEATED type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.ServiceEntry.Endpoint.PortsEntry" json_name:"ports"
+// fieldName name:"labels" number:3 label:LABEL_REPEATED type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.ServiceEntry.Endpoint.LabelsEntry" json_name:"labels"
+// fieldName name:"network" number:4 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"network"
+// fieldName name:"locality" number:5 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"locality"
+// fieldName name:"weight" number:6 label:LABEL_OPTIONAL type:TYPE_UINT32 json_name:"weight"
+// message: PortsEntry
+// fieldName name:"key" number:1 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"key"
+// fieldName name:"value" number:2 label:LABEL_OPTIONAL type:TYPE_UINT32 json_name:"value"
+// message: LabelsEntry
+// fieldName name:"key" number:1 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"key"
+// fieldName name:"value" number:2 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"value"
 var (
 	ServiceEntryMarshaler   = &github_com_gogo_protobuf_jsonpb.Marshaler{}
 	ServiceEntryUnmarshaler = &github_com_gogo_protobuf_jsonpb.Unmarshaler{}

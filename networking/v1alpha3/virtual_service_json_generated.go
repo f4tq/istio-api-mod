@@ -46,6 +46,124 @@ var _ = proto.Marshal
 var _ = fmt.Errorf
 var _ = math.Inf
 
+// message: VirtualService
+// fieldName name:"hosts" number:1 label:LABEL_REPEATED type:TYPE_STRING json_name:"hosts"
+// fieldName name:"gateways" number:2 label:LABEL_REPEATED type:TYPE_STRING json_name:"gateways"
+// fieldName name:"http" number:3 label:LABEL_REPEATED type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.HTTPRoute" json_name:"http"
+// fieldName name:"tls" number:5 label:LABEL_REPEATED type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.TLSRoute" json_name:"tls"
+// fieldName name:"tcp" number:4 label:LABEL_REPEATED type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.TCPRoute" json_name:"tcp"
+// fieldName name:"config_scope" number:6 label:LABEL_OPTIONAL type:TYPE_ENUM type_name:".istio.networking.v1alpha3.ConfigScope" json_name:"configScope"
+// message: Destination
+// fieldName name:"host" number:1 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"host"
+// fieldName name:"subset" number:2 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"subset"
+// fieldName name:"port" number:3 label:LABEL_OPTIONAL type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.PortSelector" json_name:"port"
+// message: HTTPRoute
+// fieldName name:"match" number:1 label:LABEL_REPEATED type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.HTTPMatchRequest" json_name:"match"
+// fieldName name:"route" number:2 label:LABEL_REPEATED type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.HTTPRouteDestination" json_name:"route"
+// fieldName name:"redirect" number:3 label:LABEL_OPTIONAL type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.HTTPRedirect" json_name:"redirect"
+// fieldName name:"rewrite" number:4 label:LABEL_OPTIONAL type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.HTTPRewrite" json_name:"rewrite"
+// fieldName name:"websocket_upgrade" number:5 label:LABEL_OPTIONAL type:TYPE_BOOL json_name:"websocketUpgrade"
+// fieldName name:"timeout" number:6 label:LABEL_OPTIONAL type:TYPE_MESSAGE type_name:".google.protobuf.Duration" json_name:"timeout"
+// message has wkt HTTPRoute
+// Generating Marshal for message: HTTPRoute
+// MarshalJSON is a custom marshaler supporting oneof fields for HTTPRoute
+func (this *HTTPRoute) MarshalJSON() ([]byte, error) {
+	str, err := VirtualServiceMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for HTTPRoute
+func (this *HTTPRoute) UnmarshalJSON(b []byte) error {
+	return VirtualServiceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
+// message: AppendHeadersEntry
+// fieldName name:"key" number:1 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"key"
+// fieldName name:"value" number:2 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"value"
+// message: AppendResponseHeadersEntry
+// fieldName name:"key" number:1 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"key"
+// fieldName name:"value" number:2 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"value"
+// message: AppendRequestHeadersEntry
+// fieldName name:"key" number:1 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"key"
+// fieldName name:"value" number:2 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"value"
+// message: Headers
+// fieldName name:"request" number:1 label:LABEL_OPTIONAL type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.Headers.HeaderOperations" json_name:"request"
+// fieldName name:"response" number:2 label:LABEL_OPTIONAL type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.Headers.HeaderOperations" json_name:"response"
+// message: HeaderOperations
+// fieldName name:"set" number:1 label:LABEL_REPEATED type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.Headers.HeaderOperations.SetEntry" json_name:"set"
+// fieldName name:"add" number:2 label:LABEL_REPEATED type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.Headers.HeaderOperations.AddEntry" json_name:"add"
+// fieldName name:"remove" number:3 label:LABEL_REPEATED type:TYPE_STRING json_name:"remove"
+// message: SetEntry
+// fieldName name:"key" number:1 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"key"
+// fieldName name:"value" number:2 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"value"
+// message: AddEntry
+// fieldName name:"key" number:1 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"key"
+// fieldName name:"value" number:2 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"value"
+// message: TLSRoute
+// fieldName name:"match" number:1 label:LABEL_REPEATED type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.TLSMatchAttributes" json_name:"match"
+// fieldName name:"route" number:2 label:LABEL_REPEATED type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.RouteDestination" json_name:"route"
+// message: TCPRoute
+// fieldName name:"match" number:1 label:LABEL_REPEATED type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.L4MatchAttributes" json_name:"match"
+// fieldName name:"route" number:2 label:LABEL_REPEATED type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.RouteDestination" json_name:"route"
+// message: HTTPMatchRequest
+// fieldName name:"uri" number:1 label:LABEL_OPTIONAL type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.StringMatch" json_name:"uri"
+// fieldName name:"scheme" number:2 label:LABEL_OPTIONAL type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.StringMatch" json_name:"scheme"
+// fieldName name:"method" number:3 label:LABEL_OPTIONAL type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.StringMatch" json_name:"method"
+// fieldName name:"authority" number:4 label:LABEL_OPTIONAL type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.StringMatch" json_name:"authority"
+// fieldName name:"headers" number:5 label:LABEL_REPEATED type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.HTTPMatchRequest.HeadersEntry" json_name:"headers"
+// fieldName name:"port" number:6 label:LABEL_OPTIONAL type:TYPE_UINT32 json_name:"port"
+// fieldName name:"source_labels" number:7 label:LABEL_REPEATED type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.HTTPMatchRequest.SourceLabelsEntry" json_name:"sourceLabels"
+// fieldName name:"gateways" number:8 label:LABEL_REPEATED type:TYPE_STRING json_name:"gateways"
+// message: HeadersEntry
+// fieldName name:"key" number:1 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"key"
+// fieldName name:"value" number:2 label:LABEL_OPTIONAL type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.StringMatch" json_name:"value"
+// message: SourceLabelsEntry
+// fieldName name:"key" number:1 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"key"
+// fieldName name:"value" number:2 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"value"
+// message: HTTPRouteDestination
+// fieldName name:"destination" number:1 label:LABEL_OPTIONAL type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.Destination" json_name:"destination"
+// fieldName name:"weight" number:2 label:LABEL_OPTIONAL type:TYPE_INT32 json_name:"weight"
+// fieldName name:"remove_response_headers" number:3 label:LABEL_REPEATED type:TYPE_STRING json_name:"removeResponseHeaders" options:<deprecated:true >
+// fieldName name:"append_response_headers" number:4 label:LABEL_REPEATED type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.HTTPRouteDestination.AppendResponseHeadersEntry" json_name:"appendResponseHeaders" options:<deprecated:true >
+// fieldName name:"remove_request_headers" number:5 label:LABEL_REPEATED type:TYPE_STRING json_name:"removeRequestHeaders" options:<deprecated:true >
+// fieldName name:"append_request_headers" number:6 label:LABEL_REPEATED type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.HTTPRouteDestination.AppendRequestHeadersEntry" json_name:"appendRequestHeaders" options:<deprecated:true >
+// fieldName name:"headers" number:7 label:LABEL_OPTIONAL type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.Headers" json_name:"headers"
+// message: AppendResponseHeadersEntry
+// fieldName name:"key" number:1 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"key"
+// fieldName name:"value" number:2 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"value"
+// message: AppendRequestHeadersEntry
+// fieldName name:"key" number:1 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"key"
+// fieldName name:"value" number:2 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"value"
+// message: RouteDestination
+// fieldName name:"destination" number:1 label:LABEL_OPTIONAL type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.Destination" json_name:"destination"
+// fieldName name:"weight" number:2 label:LABEL_OPTIONAL type:TYPE_INT32 json_name:"weight"
+// message: L4MatchAttributes
+// fieldName name:"destination_subnets" number:1 label:LABEL_REPEATED type:TYPE_STRING json_name:"destinationSubnets"
+// fieldName name:"port" number:2 label:LABEL_OPTIONAL type:TYPE_UINT32 json_name:"port"
+// fieldName name:"source_subnet" number:3 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"sourceSubnet"
+// fieldName name:"source_labels" number:4 label:LABEL_REPEATED type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.L4MatchAttributes.SourceLabelsEntry" json_name:"sourceLabels"
+// fieldName name:"gateways" number:5 label:LABEL_REPEATED type:TYPE_STRING json_name:"gateways"
+// message: SourceLabelsEntry
+// fieldName name:"key" number:1 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"key"
+// fieldName name:"value" number:2 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"value"
+// message: TLSMatchAttributes
+// fieldName name:"sni_hosts" number:1 label:LABEL_REPEATED type:TYPE_STRING json_name:"sniHosts"
+// fieldName name:"destination_subnets" number:2 label:LABEL_REPEATED type:TYPE_STRING json_name:"destinationSubnets"
+// fieldName name:"port" number:3 label:LABEL_OPTIONAL type:TYPE_UINT32 json_name:"port"
+// fieldName name:"source_subnet" number:4 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"sourceSubnet"
+// fieldName name:"source_labels" number:5 label:LABEL_REPEATED type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.TLSMatchAttributes.SourceLabelsEntry" json_name:"sourceLabels"
+// fieldName name:"gateways" number:6 label:LABEL_REPEATED type:TYPE_STRING json_name:"gateways"
+// message: SourceLabelsEntry
+// fieldName name:"key" number:1 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"key"
+// fieldName name:"value" number:2 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"value"
+// message: HTTPRedirect
+// fieldName name:"uri" number:1 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"uri"
+// fieldName name:"authority" number:2 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"authority"
+// message: HTTPRewrite
+// fieldName name:"uri" number:1 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"uri"
+// fieldName name:"authority" number:2 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"authority"
+// message: StringMatch
+// Generating Marshal for message: StringMatch
 // MarshalJSON is a custom marshaler supporting oneof fields for StringMatch
 func (this *StringMatch) MarshalJSON() ([]byte, error) {
 	str, err := VirtualServiceMarshaler.MarshalToString(this)
@@ -57,6 +175,46 @@ func (this *StringMatch) UnmarshalJSON(b []byte) error {
 	return VirtualServiceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
 }
 
+// message: HTTPRetry
+// fieldName name:"attempts" number:1 label:LABEL_OPTIONAL type:TYPE_INT32 json_name:"attempts"
+// fieldName name:"per_try_timeout" number:2 label:LABEL_OPTIONAL type:TYPE_MESSAGE type_name:".google.protobuf.Duration" json_name:"perTryTimeout"
+// message has wkt HTTPRetry
+// Generating Marshal for message: HTTPRetry
+// MarshalJSON is a custom marshaler supporting oneof fields for HTTPRetry
+func (this *HTTPRetry) MarshalJSON() ([]byte, error) {
+	str, err := VirtualServiceMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for HTTPRetry
+func (this *HTTPRetry) UnmarshalJSON(b []byte) error {
+	return VirtualServiceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
+// message: CorsPolicy
+// fieldName name:"allow_origin" number:1 label:LABEL_REPEATED type:TYPE_STRING json_name:"allowOrigin"
+// fieldName name:"allow_methods" number:2 label:LABEL_REPEATED type:TYPE_STRING json_name:"allowMethods"
+// fieldName name:"allow_headers" number:3 label:LABEL_REPEATED type:TYPE_STRING json_name:"allowHeaders"
+// fieldName name:"expose_headers" number:4 label:LABEL_REPEATED type:TYPE_STRING json_name:"exposeHeaders"
+// fieldName name:"max_age" number:5 label:LABEL_OPTIONAL type:TYPE_MESSAGE type_name:".google.protobuf.Duration" json_name:"maxAge"
+// message has wkt CorsPolicy
+// Generating Marshal for message: CorsPolicy
+// MarshalJSON is a custom marshaler supporting oneof fields for CorsPolicy
+func (this *CorsPolicy) MarshalJSON() ([]byte, error) {
+	str, err := VirtualServiceMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for CorsPolicy
+func (this *CorsPolicy) UnmarshalJSON(b []byte) error {
+	return VirtualServiceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
+// message: HTTPFaultInjection
+// fieldName name:"delay" number:1 label:LABEL_OPTIONAL type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.HTTPFaultInjection.Delay" json_name:"delay"
+// fieldName name:"abort" number:2 label:LABEL_OPTIONAL type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.HTTPFaultInjection.Abort" json_name:"abort"
+// message: Delay
+// Generating Marshal for message: Delay
 // MarshalJSON is a custom marshaler supporting oneof fields for HTTPFaultInjection_Delay
 func (this *HTTPFaultInjection_Delay) MarshalJSON() ([]byte, error) {
 	str, err := VirtualServiceMarshaler.MarshalToString(this)
@@ -68,6 +226,8 @@ func (this *HTTPFaultInjection_Delay) UnmarshalJSON(b []byte) error {
 	return VirtualServiceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
 }
 
+// message: Abort
+// Generating Marshal for message: Abort
 // MarshalJSON is a custom marshaler supporting oneof fields for HTTPFaultInjection_Abort
 func (this *HTTPFaultInjection_Abort) MarshalJSON() ([]byte, error) {
 	str, err := VirtualServiceMarshaler.MarshalToString(this)
@@ -79,6 +239,8 @@ func (this *HTTPFaultInjection_Abort) UnmarshalJSON(b []byte) error {
 	return VirtualServiceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
 }
 
+// message: PortSelector
+// Generating Marshal for message: PortSelector
 // MarshalJSON is a custom marshaler supporting oneof fields for PortSelector
 func (this *PortSelector) MarshalJSON() ([]byte, error) {
 	str, err := VirtualServiceMarshaler.MarshalToString(this)
@@ -90,6 +252,8 @@ func (this *PortSelector) UnmarshalJSON(b []byte) error {
 	return VirtualServiceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
 }
 
+// message: Percent
+// fieldName name:"value" number:1 label:LABEL_OPTIONAL type:TYPE_DOUBLE json_name:"value"
 var (
 	VirtualServiceMarshaler   = &github_com_gogo_protobuf_jsonpb.Marshaler{}
 	VirtualServiceUnmarshaler = &github_com_gogo_protobuf_jsonpb.Unmarshaler{}

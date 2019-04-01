@@ -16,6 +16,32 @@ var _ = proto.Marshal
 var _ = fmt.Errorf
 var _ = math.Inf
 
+// message: DestinationRule
+// fieldName name:"host" number:1 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"host"
+// fieldName name:"traffic_policy" number:2 label:LABEL_OPTIONAL type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.TrafficPolicy" json_name:"trafficPolicy"
+// fieldName name:"subsets" number:3 label:LABEL_REPEATED type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.Subset" json_name:"subsets"
+// fieldName name:"config_scope" number:4 label:LABEL_OPTIONAL type:TYPE_ENUM type_name:".istio.networking.v1alpha3.ConfigScope" json_name:"configScope"
+// message: TrafficPolicy
+// fieldName name:"load_balancer" number:1 label:LABEL_OPTIONAL type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.LoadBalancerSettings" json_name:"loadBalancer"
+// fieldName name:"connection_pool" number:2 label:LABEL_OPTIONAL type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.ConnectionPoolSettings" json_name:"connectionPool"
+// fieldName name:"outlier_detection" number:3 label:LABEL_OPTIONAL type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.OutlierDetection" json_name:"outlierDetection"
+// fieldName name:"tls" number:4 label:LABEL_OPTIONAL type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.TLSSettings" json_name:"tls"
+// fieldName name:"port_level_settings" number:5 label:LABEL_REPEATED type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.TrafficPolicy.PortTrafficPolicy" json_name:"portLevelSettings"
+// message: PortTrafficPolicy
+// fieldName name:"port" number:1 label:LABEL_OPTIONAL type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.PortSelector" json_name:"port"
+// fieldName name:"load_balancer" number:2 label:LABEL_OPTIONAL type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.LoadBalancerSettings" json_name:"loadBalancer"
+// fieldName name:"connection_pool" number:3 label:LABEL_OPTIONAL type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.ConnectionPoolSettings" json_name:"connectionPool"
+// fieldName name:"outlier_detection" number:4 label:LABEL_OPTIONAL type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.OutlierDetection" json_name:"outlierDetection"
+// fieldName name:"tls" number:5 label:LABEL_OPTIONAL type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.TLSSettings" json_name:"tls"
+// message: Subset
+// fieldName name:"name" number:1 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"name"
+// fieldName name:"labels" number:2 label:LABEL_REPEATED type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.Subset.LabelsEntry" json_name:"labels"
+// fieldName name:"traffic_policy" number:3 label:LABEL_OPTIONAL type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.TrafficPolicy" json_name:"trafficPolicy"
+// message: LabelsEntry
+// fieldName name:"key" number:1 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"key"
+// fieldName name:"value" number:2 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"value"
+// message: LoadBalancerSettings
+// Generating Marshal for message: LoadBalancerSettings
 // MarshalJSON is a custom marshaler supporting oneof fields for LoadBalancerSettings
 func (this *LoadBalancerSettings) MarshalJSON() ([]byte, error) {
 	str, err := DestinationRuleMarshaler.MarshalToString(this)
@@ -27,6 +53,8 @@ func (this *LoadBalancerSettings) UnmarshalJSON(b []byte) error {
 	return DestinationRuleUnmarshaler.Unmarshal(bytes.NewReader(b), this)
 }
 
+// message: ConsistentHashLB
+// Generating Marshal for message: ConsistentHashLB
 // MarshalJSON is a custom marshaler supporting oneof fields for LoadBalancerSettings_ConsistentHashLB
 func (this *LoadBalancerSettings_ConsistentHashLB) MarshalJSON() ([]byte, error) {
 	str, err := DestinationRuleMarshaler.MarshalToString(this)
@@ -38,6 +66,81 @@ func (this *LoadBalancerSettings_ConsistentHashLB) UnmarshalJSON(b []byte) error
 	return DestinationRuleUnmarshaler.Unmarshal(bytes.NewReader(b), this)
 }
 
+// message: HTTPCookie
+// fieldName name:"name" number:1 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"name"
+// fieldName name:"path" number:2 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"path"
+// fieldName name:"ttl" number:3 label:LABEL_OPTIONAL type:TYPE_MESSAGE type_name:".google.protobuf.Duration" json_name:"ttl" options:<[gogoproto.stdduration]:true >
+// message has wkt HTTPCookie
+// Generating Marshal for message: HTTPCookie
+// MarshalJSON is a custom marshaler supporting oneof fields for LoadBalancerSettings_ConsistentHashLB_HTTPCookie
+func (this *LoadBalancerSettings_ConsistentHashLB_HTTPCookie) MarshalJSON() ([]byte, error) {
+	str, err := DestinationRuleMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for LoadBalancerSettings_ConsistentHashLB_HTTPCookie
+func (this *LoadBalancerSettings_ConsistentHashLB_HTTPCookie) UnmarshalJSON(b []byte) error {
+	return DestinationRuleUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
+// message: ConnectionPoolSettings
+// fieldName name:"tcp" number:1 label:LABEL_OPTIONAL type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.ConnectionPoolSettings.TCPSettings" json_name:"tcp"
+// fieldName name:"http" number:2 label:LABEL_OPTIONAL type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.ConnectionPoolSettings.HTTPSettings" json_name:"http"
+// message: TCPSettings
+// fieldName name:"max_connections" number:1 label:LABEL_OPTIONAL type:TYPE_INT32 json_name:"maxConnections"
+// fieldName name:"connect_timeout" number:2 label:LABEL_OPTIONAL type:TYPE_MESSAGE type_name:".google.protobuf.Duration" json_name:"connectTimeout"
+// message has wkt TCPSettings
+// Generating Marshal for message: TCPSettings
+// MarshalJSON is a custom marshaler supporting oneof fields for ConnectionPoolSettings_TCPSettings
+func (this *ConnectionPoolSettings_TCPSettings) MarshalJSON() ([]byte, error) {
+	str, err := DestinationRuleMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for ConnectionPoolSettings_TCPSettings
+func (this *ConnectionPoolSettings_TCPSettings) UnmarshalJSON(b []byte) error {
+	return DestinationRuleUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
+// message: TcpKeepalive
+// fieldName name:"probes" number:1 label:LABEL_OPTIONAL type:TYPE_UINT32 json_name:"probes"
+// fieldName name:"time" number:2 label:LABEL_OPTIONAL type:TYPE_MESSAGE type_name:".google.protobuf.Duration" json_name:"time"
+// message has wkt TcpKeepalive
+// Generating Marshal for message: TcpKeepalive
+// MarshalJSON is a custom marshaler supporting oneof fields for ConnectionPoolSettings_TCPSettings_TcpKeepalive
+func (this *ConnectionPoolSettings_TCPSettings_TcpKeepalive) MarshalJSON() ([]byte, error) {
+	str, err := DestinationRuleMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for ConnectionPoolSettings_TCPSettings_TcpKeepalive
+func (this *ConnectionPoolSettings_TCPSettings_TcpKeepalive) UnmarshalJSON(b []byte) error {
+	return DestinationRuleUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
+// message: HTTPSettings
+// fieldName name:"http1_max_pending_requests" number:1 label:LABEL_OPTIONAL type:TYPE_INT32 json_name:"http1MaxPendingRequests"
+// fieldName name:"http2_max_requests" number:2 label:LABEL_OPTIONAL type:TYPE_INT32 json_name:"http2MaxRequests"
+// fieldName name:"max_requests_per_connection" number:3 label:LABEL_OPTIONAL type:TYPE_INT32 json_name:"maxRequestsPerConnection"
+// fieldName name:"max_retries" number:4 label:LABEL_OPTIONAL type:TYPE_INT32 json_name:"maxRetries"
+// message: OutlierDetection
+// fieldName name:"consecutive_errors" number:1 label:LABEL_OPTIONAL type:TYPE_INT32 json_name:"consecutiveErrors"
+// fieldName name:"interval" number:2 label:LABEL_OPTIONAL type:TYPE_MESSAGE type_name:".google.protobuf.Duration" json_name:"interval"
+// message has wkt OutlierDetection
+// Generating Marshal for message: OutlierDetection
+// MarshalJSON is a custom marshaler supporting oneof fields for OutlierDetection
+func (this *OutlierDetection) MarshalJSON() ([]byte, error) {
+	str, err := DestinationRuleMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for OutlierDetection
+func (this *OutlierDetection) UnmarshalJSON(b []byte) error {
+	return DestinationRuleUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
+// message: TLSSettings
+// Generating Marshal for message: TLSSettings
 // MarshalJSON is a custom marshaler supporting oneof fields for TLSSettings
 func (this *TLSSettings) MarshalJSON() ([]byte, error) {
 	str, err := DestinationRuleMarshaler.MarshalToString(this)

@@ -40,4 +40,3 @@ genbin/
 
 /vendor
 prototool.yaml
-Makefile.istio

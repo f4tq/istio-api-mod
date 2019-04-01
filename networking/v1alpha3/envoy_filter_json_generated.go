@@ -15,6 +15,14 @@ var _ = proto.Marshal
 var _ = fmt.Errorf
 var _ = math.Inf
 
+// message: EnvoyFilter
+// fieldName name:"workload_labels" number:1 label:LABEL_REPEATED type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.EnvoyFilter.WorkloadLabelsEntry" json_name:"workloadLabels"
+// fieldName name:"filters" number:2 label:LABEL_REPEATED type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.EnvoyFilter.Filter" json_name:"filters"
+// message: WorkloadLabelsEntry
+// fieldName name:"key" number:1 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"key"
+// fieldName name:"value" number:2 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"value"
+// message: ListenerMatch
+// Generating Marshal for message: ListenerMatch
 // MarshalJSON is a custom marshaler supporting oneof fields for EnvoyFilter_ListenerMatch
 func (this *EnvoyFilter_ListenerMatch) MarshalJSON() ([]byte, error) {
 	str, err := EnvoyFilterMarshaler.MarshalToString(this)
@@ -26,6 +34,8 @@ func (this *EnvoyFilter_ListenerMatch) UnmarshalJSON(b []byte) error {
 	return EnvoyFilterUnmarshaler.Unmarshal(bytes.NewReader(b), this)
 }
 
+// message: InsertPosition
+// Generating Marshal for message: InsertPosition
 // MarshalJSON is a custom marshaler supporting oneof fields for EnvoyFilter_InsertPosition
 func (this *EnvoyFilter_InsertPosition) MarshalJSON() ([]byte, error) {
 	str, err := EnvoyFilterMarshaler.MarshalToString(this)
@@ -37,6 +47,8 @@ func (this *EnvoyFilter_InsertPosition) UnmarshalJSON(b []byte) error {
 	return EnvoyFilterUnmarshaler.Unmarshal(bytes.NewReader(b), this)
 }
 
+// message: Filter
+// Generating Marshal for message: Filter
 // MarshalJSON is a custom marshaler supporting oneof fields for EnvoyFilter_Filter
 func (this *EnvoyFilter_Filter) MarshalJSON() ([]byte, error) {
 	str, err := EnvoyFilterMarshaler.MarshalToString(this)

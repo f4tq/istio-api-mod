@@ -83,7 +83,7 @@ lint: vendor mutate_src
 	make -f Makefile.istio protolock=$(protolock) protoc=$(protoc) protoc_gen_docs_plugin=$(proto_gen_docs_plugin) $@
 
 # change protos to our package name (not the k8 crd name though)
-mutate_src: Makefile.istio prototool.yaml
+mutate_src:  prototool.yaml
 	@echo "Source mutated"
 
 prototool.yaml: $(proto_dir)/prototool.yaml
