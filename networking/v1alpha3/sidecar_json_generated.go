@@ -15,11 +15,44 @@ var _ = fmt.Errorf
 var _ = math.Inf
 
 // message: Sidecar
-// skipping message: Sidecar
+// Generating Marshal for message: Sidecar
+// MarshalJSON is a custom marshaler supporting oneof fields for Sidecar
+func (this *Sidecar) MarshalJSON() ([]byte, error) {
+	str, err := SidecarMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for Sidecar
+func (this *Sidecar) UnmarshalJSON(b []byte) error {
+	return SidecarUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
 // message: IstioIngressListener
-// skipping message: IstioIngressListener
+// Generating Marshal for message: IstioIngressListener
+// MarshalJSON is a custom marshaler supporting oneof fields for IstioIngressListener
+func (this *IstioIngressListener) MarshalJSON() ([]byte, error) {
+	str, err := SidecarMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for IstioIngressListener
+func (this *IstioIngressListener) UnmarshalJSON(b []byte) error {
+	return SidecarUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
 // message: IstioEgressListener
-// skipping message: IstioEgressListener
+// Generating Marshal for message: IstioEgressListener
+// MarshalJSON is a custom marshaler supporting oneof fields for IstioEgressListener
+func (this *IstioEgressListener) MarshalJSON() ([]byte, error) {
+	str, err := SidecarMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for IstioEgressListener
+func (this *IstioEgressListener) UnmarshalJSON(b []byte) error {
+	return SidecarUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
 // message: WorkloadSelector
 // Generating Marshal for message: WorkloadSelector
 // MarshalJSON is a custom marshaler supporting oneof fields for WorkloadSelector

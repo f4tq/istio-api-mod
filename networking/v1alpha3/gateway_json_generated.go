@@ -56,7 +56,18 @@ func (this *Server_TLSOptions) UnmarshalJSON(b []byte) error {
 }
 
 // message: Port
-// skipping message: Port
+// Generating Marshal for message: Port
+// MarshalJSON is a custom marshaler supporting oneof fields for Port
+func (this *Port) MarshalJSON() ([]byte, error) {
+	str, err := GatewayMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for Port
+func (this *Port) UnmarshalJSON(b []byte) error {
+	return GatewayUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
 var (
 	GatewayMarshaler   = &github_com_gogo_protobuf_jsonpb.Marshaler{}
 	GatewayUnmarshaler = &github_com_gogo_protobuf_jsonpb.Unmarshaler{}
