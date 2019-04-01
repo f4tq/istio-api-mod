@@ -28,18 +28,44 @@ func (this *ServiceEntry) UnmarshalJSON(b []byte) error {
 }
 
 // message: Endpoint
-// fieldName name:"address" number:1 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"address"
-// fieldName name:"ports" number:2 label:LABEL_REPEATED type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.ServiceEntry.Endpoint.PortsEntry" json_name:"ports"
-// fieldName name:"labels" number:3 label:LABEL_REPEATED type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.ServiceEntry.Endpoint.LabelsEntry" json_name:"labels"
-// fieldName name:"network" number:4 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"network"
-// fieldName name:"locality" number:5 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"locality"
-// fieldName name:"weight" number:6 label:LABEL_OPTIONAL type:TYPE_UINT32 json_name:"weight"
+// Generating Marshal for message: Endpoint
+// MarshalJSON is a custom marshaler supporting oneof fields for ServiceEntry_Endpoint
+func (this *ServiceEntry_Endpoint) MarshalJSON() ([]byte, error) {
+	str, err := ServiceEntryMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for ServiceEntry_Endpoint
+func (this *ServiceEntry_Endpoint) UnmarshalJSON(b []byte) error {
+	return ServiceEntryUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
 // message: PortsEntry
-// fieldName name:"key" number:1 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"key"
-// fieldName name:"value" number:2 label:LABEL_OPTIONAL type:TYPE_UINT32 json_name:"value"
+// Generating Marshal for message: PortsEntry
+// MarshalJSON is a custom marshaler supporting oneof fields for ServiceEntry_Endpoint_PortsEntry
+func (this *ServiceEntry_Endpoint_PortsEntry) MarshalJSON() ([]byte, error) {
+	str, err := ServiceEntryMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for ServiceEntry_Endpoint_PortsEntry
+func (this *ServiceEntry_Endpoint_PortsEntry) UnmarshalJSON(b []byte) error {
+	return ServiceEntryUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
 // message: LabelsEntry
-// fieldName name:"key" number:1 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"key"
-// fieldName name:"value" number:2 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"value"
+// Generating Marshal for message: LabelsEntry
+// MarshalJSON is a custom marshaler supporting oneof fields for ServiceEntry_Endpoint_LabelsEntry
+func (this *ServiceEntry_Endpoint_LabelsEntry) MarshalJSON() ([]byte, error) {
+	str, err := ServiceEntryMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for ServiceEntry_Endpoint_LabelsEntry
+func (this *ServiceEntry_Endpoint_LabelsEntry) UnmarshalJSON(b []byte) error {
+	return ServiceEntryUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
 var (
 	ServiceEntryMarshaler   = &github_com_gogo_protobuf_jsonpb.Marshaler{}
 	ServiceEntryUnmarshaler = &github_com_gogo_protobuf_jsonpb.Unmarshaler{}

@@ -16,11 +16,31 @@ var _ = fmt.Errorf
 var _ = math.Inf
 
 // message: EnvoyFilter
-// fieldName name:"workload_labels" number:1 label:LABEL_REPEATED type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.EnvoyFilter.WorkloadLabelsEntry" json_name:"workloadLabels"
-// fieldName name:"filters" number:2 label:LABEL_REPEATED type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.EnvoyFilter.Filter" json_name:"filters"
+// Generating Marshal for message: EnvoyFilter
+// MarshalJSON is a custom marshaler supporting oneof fields for EnvoyFilter
+func (this *EnvoyFilter) MarshalJSON() ([]byte, error) {
+	str, err := EnvoyFilterMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for EnvoyFilter
+func (this *EnvoyFilter) UnmarshalJSON(b []byte) error {
+	return EnvoyFilterUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
 // message: WorkloadLabelsEntry
-// fieldName name:"key" number:1 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"key"
-// fieldName name:"value" number:2 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"value"
+// Generating Marshal for message: WorkloadLabelsEntry
+// MarshalJSON is a custom marshaler supporting oneof fields for EnvoyFilter_WorkloadLabelsEntry
+func (this *EnvoyFilter_WorkloadLabelsEntry) MarshalJSON() ([]byte, error) {
+	str, err := EnvoyFilterMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for EnvoyFilter_WorkloadLabelsEntry
+func (this *EnvoyFilter_WorkloadLabelsEntry) UnmarshalJSON(b []byte) error {
+	return EnvoyFilterUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
 // message: ListenerMatch
 // Generating Marshal for message: ListenerMatch
 // MarshalJSON is a custom marshaler supporting oneof fields for EnvoyFilter_ListenerMatch

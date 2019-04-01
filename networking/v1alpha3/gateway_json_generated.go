@@ -15,17 +15,44 @@ var _ = fmt.Errorf
 var _ = math.Inf
 
 // message: Gateway
-// fieldName name:"servers" number:1 label:LABEL_REPEATED type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.Server" json_name:"servers"
-// fieldName name:"selector" number:2 label:LABEL_REPEATED type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.Gateway.SelectorEntry" json_name:"selector"
+// Generating Marshal for message: Gateway
+// MarshalJSON is a custom marshaler supporting oneof fields for Gateway
+func (this *Gateway) MarshalJSON() ([]byte, error) {
+	str, err := GatewayMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for Gateway
+func (this *Gateway) UnmarshalJSON(b []byte) error {
+	return GatewayUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
 // message: SelectorEntry
-// fieldName name:"key" number:1 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"key"
-// fieldName name:"value" number:2 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"value"
+// Generating Marshal for message: SelectorEntry
+// MarshalJSON is a custom marshaler supporting oneof fields for Gateway_SelectorEntry
+func (this *Gateway_SelectorEntry) MarshalJSON() ([]byte, error) {
+	str, err := GatewayMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for Gateway_SelectorEntry
+func (this *Gateway_SelectorEntry) UnmarshalJSON(b []byte) error {
+	return GatewayUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
 // message: Server
-// fieldName name:"port" number:1 label:LABEL_OPTIONAL type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.Port" json_name:"port"
-// fieldName name:"bind" number:4 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"bind"
-// fieldName name:"hosts" number:2 label:LABEL_REPEATED type:TYPE_STRING json_name:"hosts"
-// fieldName name:"tls" number:3 label:LABEL_OPTIONAL type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.Server.TLSOptions" json_name:"tls"
-// fieldName name:"default_endpoint" number:5 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"defaultEndpoint"
+// Generating Marshal for message: Server
+// MarshalJSON is a custom marshaler supporting oneof fields for Server
+func (this *Server) MarshalJSON() ([]byte, error) {
+	str, err := GatewayMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for Server
+func (this *Server) UnmarshalJSON(b []byte) error {
+	return GatewayUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
 // message: TLSOptions
 // Generating Marshal for message: TLSOptions
 // MarshalJSON is a custom marshaler supporting oneof fields for Server_TLSOptions
@@ -40,9 +67,18 @@ func (this *Server_TLSOptions) UnmarshalJSON(b []byte) error {
 }
 
 // message: Port
-// fieldName name:"number" number:1 label:LABEL_OPTIONAL type:TYPE_UINT32 json_name:"number"
-// fieldName name:"protocol" number:2 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"protocol"
-// fieldName name:"name" number:3 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"name"
+// Generating Marshal for message: Port
+// MarshalJSON is a custom marshaler supporting oneof fields for Port
+func (this *Port) MarshalJSON() ([]byte, error) {
+	str, err := GatewayMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for Port
+func (this *Port) UnmarshalJSON(b []byte) error {
+	return GatewayUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
 var (
 	GatewayMarshaler   = &github_com_gogo_protobuf_jsonpb.Marshaler{}
 	GatewayUnmarshaler = &github_com_gogo_protobuf_jsonpb.Unmarshaler{}

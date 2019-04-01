@@ -47,24 +47,32 @@ var _ = fmt.Errorf
 var _ = math.Inf
 
 // message: VirtualService
-// fieldName name:"hosts" number:1 label:LABEL_REPEATED type:TYPE_STRING json_name:"hosts"
-// fieldName name:"gateways" number:2 label:LABEL_REPEATED type:TYPE_STRING json_name:"gateways"
-// fieldName name:"http" number:3 label:LABEL_REPEATED type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.HTTPRoute" json_name:"http"
-// fieldName name:"tls" number:5 label:LABEL_REPEATED type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.TLSRoute" json_name:"tls"
-// fieldName name:"tcp" number:4 label:LABEL_REPEATED type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.TCPRoute" json_name:"tcp"
-// fieldName name:"config_scope" number:6 label:LABEL_OPTIONAL type:TYPE_ENUM type_name:".istio.networking.v1alpha3.ConfigScope" json_name:"configScope"
+// Generating Marshal for message: VirtualService
+// MarshalJSON is a custom marshaler supporting oneof fields for VirtualService
+func (this *VirtualService) MarshalJSON() ([]byte, error) {
+	str, err := VirtualServiceMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for VirtualService
+func (this *VirtualService) UnmarshalJSON(b []byte) error {
+	return VirtualServiceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
 // message: Destination
-// fieldName name:"host" number:1 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"host"
-// fieldName name:"subset" number:2 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"subset"
-// fieldName name:"port" number:3 label:LABEL_OPTIONAL type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.PortSelector" json_name:"port"
+// Generating Marshal for message: Destination
+// MarshalJSON is a custom marshaler supporting oneof fields for Destination
+func (this *Destination) MarshalJSON() ([]byte, error) {
+	str, err := VirtualServiceMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for Destination
+func (this *Destination) UnmarshalJSON(b []byte) error {
+	return VirtualServiceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
 // message: HTTPRoute
-// fieldName name:"match" number:1 label:LABEL_REPEATED type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.HTTPMatchRequest" json_name:"match"
-// fieldName name:"route" number:2 label:LABEL_REPEATED type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.HTTPRouteDestination" json_name:"route"
-// fieldName name:"redirect" number:3 label:LABEL_OPTIONAL type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.HTTPRedirect" json_name:"redirect"
-// fieldName name:"rewrite" number:4 label:LABEL_OPTIONAL type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.HTTPRewrite" json_name:"rewrite"
-// fieldName name:"websocket_upgrade" number:5 label:LABEL_OPTIONAL type:TYPE_BOOL json_name:"websocketUpgrade"
-// fieldName name:"timeout" number:6 label:LABEL_OPTIONAL type:TYPE_MESSAGE type_name:".google.protobuf.Duration" json_name:"timeout"
-// message has wkt HTTPRoute
 // Generating Marshal for message: HTTPRoute
 // MarshalJSON is a custom marshaler supporting oneof fields for HTTPRoute
 func (this *HTTPRoute) MarshalJSON() ([]byte, error) {
@@ -78,90 +86,291 @@ func (this *HTTPRoute) UnmarshalJSON(b []byte) error {
 }
 
 // message: AppendHeadersEntry
-// fieldName name:"key" number:1 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"key"
-// fieldName name:"value" number:2 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"value"
+// Generating Marshal for message: AppendHeadersEntry
+// MarshalJSON is a custom marshaler supporting oneof fields for HTTPRoute_AppendHeadersEntry
+func (this *HTTPRoute_AppendHeadersEntry) MarshalJSON() ([]byte, error) {
+	str, err := VirtualServiceMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for HTTPRoute_AppendHeadersEntry
+func (this *HTTPRoute_AppendHeadersEntry) UnmarshalJSON(b []byte) error {
+	return VirtualServiceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
 // message: AppendResponseHeadersEntry
-// fieldName name:"key" number:1 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"key"
-// fieldName name:"value" number:2 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"value"
+// Generating Marshal for message: AppendResponseHeadersEntry
+// MarshalJSON is a custom marshaler supporting oneof fields for HTTPRoute_AppendResponseHeadersEntry
+func (this *HTTPRoute_AppendResponseHeadersEntry) MarshalJSON() ([]byte, error) {
+	str, err := VirtualServiceMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for HTTPRoute_AppendResponseHeadersEntry
+func (this *HTTPRoute_AppendResponseHeadersEntry) UnmarshalJSON(b []byte) error {
+	return VirtualServiceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
 // message: AppendRequestHeadersEntry
-// fieldName name:"key" number:1 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"key"
-// fieldName name:"value" number:2 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"value"
+// Generating Marshal for message: AppendRequestHeadersEntry
+// MarshalJSON is a custom marshaler supporting oneof fields for HTTPRoute_AppendRequestHeadersEntry
+func (this *HTTPRoute_AppendRequestHeadersEntry) MarshalJSON() ([]byte, error) {
+	str, err := VirtualServiceMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for HTTPRoute_AppendRequestHeadersEntry
+func (this *HTTPRoute_AppendRequestHeadersEntry) UnmarshalJSON(b []byte) error {
+	return VirtualServiceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
 // message: Headers
-// fieldName name:"request" number:1 label:LABEL_OPTIONAL type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.Headers.HeaderOperations" json_name:"request"
-// fieldName name:"response" number:2 label:LABEL_OPTIONAL type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.Headers.HeaderOperations" json_name:"response"
+// Generating Marshal for message: Headers
+// MarshalJSON is a custom marshaler supporting oneof fields for Headers
+func (this *Headers) MarshalJSON() ([]byte, error) {
+	str, err := VirtualServiceMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for Headers
+func (this *Headers) UnmarshalJSON(b []byte) error {
+	return VirtualServiceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
 // message: HeaderOperations
-// fieldName name:"set" number:1 label:LABEL_REPEATED type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.Headers.HeaderOperations.SetEntry" json_name:"set"
-// fieldName name:"add" number:2 label:LABEL_REPEATED type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.Headers.HeaderOperations.AddEntry" json_name:"add"
-// fieldName name:"remove" number:3 label:LABEL_REPEATED type:TYPE_STRING json_name:"remove"
+// Generating Marshal for message: HeaderOperations
+// MarshalJSON is a custom marshaler supporting oneof fields for Headers_HeaderOperations
+func (this *Headers_HeaderOperations) MarshalJSON() ([]byte, error) {
+	str, err := VirtualServiceMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for Headers_HeaderOperations
+func (this *Headers_HeaderOperations) UnmarshalJSON(b []byte) error {
+	return VirtualServiceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
 // message: SetEntry
-// fieldName name:"key" number:1 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"key"
-// fieldName name:"value" number:2 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"value"
+// Generating Marshal for message: SetEntry
+// MarshalJSON is a custom marshaler supporting oneof fields for Headers_HeaderOperations_SetEntry
+func (this *Headers_HeaderOperations_SetEntry) MarshalJSON() ([]byte, error) {
+	str, err := VirtualServiceMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for Headers_HeaderOperations_SetEntry
+func (this *Headers_HeaderOperations_SetEntry) UnmarshalJSON(b []byte) error {
+	return VirtualServiceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
 // message: AddEntry
-// fieldName name:"key" number:1 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"key"
-// fieldName name:"value" number:2 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"value"
+// Generating Marshal for message: AddEntry
+// MarshalJSON is a custom marshaler supporting oneof fields for Headers_HeaderOperations_AddEntry
+func (this *Headers_HeaderOperations_AddEntry) MarshalJSON() ([]byte, error) {
+	str, err := VirtualServiceMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for Headers_HeaderOperations_AddEntry
+func (this *Headers_HeaderOperations_AddEntry) UnmarshalJSON(b []byte) error {
+	return VirtualServiceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
 // message: TLSRoute
-// fieldName name:"match" number:1 label:LABEL_REPEATED type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.TLSMatchAttributes" json_name:"match"
-// fieldName name:"route" number:2 label:LABEL_REPEATED type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.RouteDestination" json_name:"route"
+// Generating Marshal for message: TLSRoute
+// MarshalJSON is a custom marshaler supporting oneof fields for TLSRoute
+func (this *TLSRoute) MarshalJSON() ([]byte, error) {
+	str, err := VirtualServiceMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for TLSRoute
+func (this *TLSRoute) UnmarshalJSON(b []byte) error {
+	return VirtualServiceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
 // message: TCPRoute
-// fieldName name:"match" number:1 label:LABEL_REPEATED type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.L4MatchAttributes" json_name:"match"
-// fieldName name:"route" number:2 label:LABEL_REPEATED type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.RouteDestination" json_name:"route"
+// Generating Marshal for message: TCPRoute
+// MarshalJSON is a custom marshaler supporting oneof fields for TCPRoute
+func (this *TCPRoute) MarshalJSON() ([]byte, error) {
+	str, err := VirtualServiceMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for TCPRoute
+func (this *TCPRoute) UnmarshalJSON(b []byte) error {
+	return VirtualServiceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
 // message: HTTPMatchRequest
-// fieldName name:"uri" number:1 label:LABEL_OPTIONAL type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.StringMatch" json_name:"uri"
-// fieldName name:"scheme" number:2 label:LABEL_OPTIONAL type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.StringMatch" json_name:"scheme"
-// fieldName name:"method" number:3 label:LABEL_OPTIONAL type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.StringMatch" json_name:"method"
-// fieldName name:"authority" number:4 label:LABEL_OPTIONAL type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.StringMatch" json_name:"authority"
-// fieldName name:"headers" number:5 label:LABEL_REPEATED type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.HTTPMatchRequest.HeadersEntry" json_name:"headers"
-// fieldName name:"port" number:6 label:LABEL_OPTIONAL type:TYPE_UINT32 json_name:"port"
-// fieldName name:"source_labels" number:7 label:LABEL_REPEATED type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.HTTPMatchRequest.SourceLabelsEntry" json_name:"sourceLabels"
-// fieldName name:"gateways" number:8 label:LABEL_REPEATED type:TYPE_STRING json_name:"gateways"
+// Generating Marshal for message: HTTPMatchRequest
+// MarshalJSON is a custom marshaler supporting oneof fields for HTTPMatchRequest
+func (this *HTTPMatchRequest) MarshalJSON() ([]byte, error) {
+	str, err := VirtualServiceMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for HTTPMatchRequest
+func (this *HTTPMatchRequest) UnmarshalJSON(b []byte) error {
+	return VirtualServiceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
 // message: HeadersEntry
-// fieldName name:"key" number:1 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"key"
-// fieldName name:"value" number:2 label:LABEL_OPTIONAL type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.StringMatch" json_name:"value"
+// Generating Marshal for message: HeadersEntry
+// MarshalJSON is a custom marshaler supporting oneof fields for HTTPMatchRequest_HeadersEntry
+func (this *HTTPMatchRequest_HeadersEntry) MarshalJSON() ([]byte, error) {
+	str, err := VirtualServiceMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for HTTPMatchRequest_HeadersEntry
+func (this *HTTPMatchRequest_HeadersEntry) UnmarshalJSON(b []byte) error {
+	return VirtualServiceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
 // message: SourceLabelsEntry
-// fieldName name:"key" number:1 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"key"
-// fieldName name:"value" number:2 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"value"
+// Generating Marshal for message: SourceLabelsEntry
+// MarshalJSON is a custom marshaler supporting oneof fields for HTTPMatchRequest_SourceLabelsEntry
+func (this *HTTPMatchRequest_SourceLabelsEntry) MarshalJSON() ([]byte, error) {
+	str, err := VirtualServiceMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for HTTPMatchRequest_SourceLabelsEntry
+func (this *HTTPMatchRequest_SourceLabelsEntry) UnmarshalJSON(b []byte) error {
+	return VirtualServiceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
 // message: HTTPRouteDestination
-// fieldName name:"destination" number:1 label:LABEL_OPTIONAL type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.Destination" json_name:"destination"
-// fieldName name:"weight" number:2 label:LABEL_OPTIONAL type:TYPE_INT32 json_name:"weight"
-// fieldName name:"remove_response_headers" number:3 label:LABEL_REPEATED type:TYPE_STRING json_name:"removeResponseHeaders" options:<deprecated:true >
-// fieldName name:"append_response_headers" number:4 label:LABEL_REPEATED type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.HTTPRouteDestination.AppendResponseHeadersEntry" json_name:"appendResponseHeaders" options:<deprecated:true >
-// fieldName name:"remove_request_headers" number:5 label:LABEL_REPEATED type:TYPE_STRING json_name:"removeRequestHeaders" options:<deprecated:true >
-// fieldName name:"append_request_headers" number:6 label:LABEL_REPEATED type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.HTTPRouteDestination.AppendRequestHeadersEntry" json_name:"appendRequestHeaders" options:<deprecated:true >
-// fieldName name:"headers" number:7 label:LABEL_OPTIONAL type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.Headers" json_name:"headers"
+// Generating Marshal for message: HTTPRouteDestination
+// MarshalJSON is a custom marshaler supporting oneof fields for HTTPRouteDestination
+func (this *HTTPRouteDestination) MarshalJSON() ([]byte, error) {
+	str, err := VirtualServiceMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for HTTPRouteDestination
+func (this *HTTPRouteDestination) UnmarshalJSON(b []byte) error {
+	return VirtualServiceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
 // message: AppendResponseHeadersEntry
-// fieldName name:"key" number:1 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"key"
-// fieldName name:"value" number:2 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"value"
+// Generating Marshal for message: AppendResponseHeadersEntry
+// MarshalJSON is a custom marshaler supporting oneof fields for HTTPRouteDestination_AppendResponseHeadersEntry
+func (this *HTTPRouteDestination_AppendResponseHeadersEntry) MarshalJSON() ([]byte, error) {
+	str, err := VirtualServiceMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for HTTPRouteDestination_AppendResponseHeadersEntry
+func (this *HTTPRouteDestination_AppendResponseHeadersEntry) UnmarshalJSON(b []byte) error {
+	return VirtualServiceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
 // message: AppendRequestHeadersEntry
-// fieldName name:"key" number:1 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"key"
-// fieldName name:"value" number:2 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"value"
+// Generating Marshal for message: AppendRequestHeadersEntry
+// MarshalJSON is a custom marshaler supporting oneof fields for HTTPRouteDestination_AppendRequestHeadersEntry
+func (this *HTTPRouteDestination_AppendRequestHeadersEntry) MarshalJSON() ([]byte, error) {
+	str, err := VirtualServiceMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for HTTPRouteDestination_AppendRequestHeadersEntry
+func (this *HTTPRouteDestination_AppendRequestHeadersEntry) UnmarshalJSON(b []byte) error {
+	return VirtualServiceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
 // message: RouteDestination
-// fieldName name:"destination" number:1 label:LABEL_OPTIONAL type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.Destination" json_name:"destination"
-// fieldName name:"weight" number:2 label:LABEL_OPTIONAL type:TYPE_INT32 json_name:"weight"
+// Generating Marshal for message: RouteDestination
+// MarshalJSON is a custom marshaler supporting oneof fields for RouteDestination
+func (this *RouteDestination) MarshalJSON() ([]byte, error) {
+	str, err := VirtualServiceMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for RouteDestination
+func (this *RouteDestination) UnmarshalJSON(b []byte) error {
+	return VirtualServiceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
 // message: L4MatchAttributes
-// fieldName name:"destination_subnets" number:1 label:LABEL_REPEATED type:TYPE_STRING json_name:"destinationSubnets"
-// fieldName name:"port" number:2 label:LABEL_OPTIONAL type:TYPE_UINT32 json_name:"port"
-// fieldName name:"source_subnet" number:3 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"sourceSubnet"
-// fieldName name:"source_labels" number:4 label:LABEL_REPEATED type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.L4MatchAttributes.SourceLabelsEntry" json_name:"sourceLabels"
-// fieldName name:"gateways" number:5 label:LABEL_REPEATED type:TYPE_STRING json_name:"gateways"
+// Generating Marshal for message: L4MatchAttributes
+// MarshalJSON is a custom marshaler supporting oneof fields for L4MatchAttributes
+func (this *L4MatchAttributes) MarshalJSON() ([]byte, error) {
+	str, err := VirtualServiceMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for L4MatchAttributes
+func (this *L4MatchAttributes) UnmarshalJSON(b []byte) error {
+	return VirtualServiceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
 // message: SourceLabelsEntry
-// fieldName name:"key" number:1 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"key"
-// fieldName name:"value" number:2 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"value"
+// Generating Marshal for message: SourceLabelsEntry
+// MarshalJSON is a custom marshaler supporting oneof fields for L4MatchAttributes_SourceLabelsEntry
+func (this *L4MatchAttributes_SourceLabelsEntry) MarshalJSON() ([]byte, error) {
+	str, err := VirtualServiceMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for L4MatchAttributes_SourceLabelsEntry
+func (this *L4MatchAttributes_SourceLabelsEntry) UnmarshalJSON(b []byte) error {
+	return VirtualServiceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
 // message: TLSMatchAttributes
-// fieldName name:"sni_hosts" number:1 label:LABEL_REPEATED type:TYPE_STRING json_name:"sniHosts"
-// fieldName name:"destination_subnets" number:2 label:LABEL_REPEATED type:TYPE_STRING json_name:"destinationSubnets"
-// fieldName name:"port" number:3 label:LABEL_OPTIONAL type:TYPE_UINT32 json_name:"port"
-// fieldName name:"source_subnet" number:4 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"sourceSubnet"
-// fieldName name:"source_labels" number:5 label:LABEL_REPEATED type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.TLSMatchAttributes.SourceLabelsEntry" json_name:"sourceLabels"
-// fieldName name:"gateways" number:6 label:LABEL_REPEATED type:TYPE_STRING json_name:"gateways"
+// Generating Marshal for message: TLSMatchAttributes
+// MarshalJSON is a custom marshaler supporting oneof fields for TLSMatchAttributes
+func (this *TLSMatchAttributes) MarshalJSON() ([]byte, error) {
+	str, err := VirtualServiceMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for TLSMatchAttributes
+func (this *TLSMatchAttributes) UnmarshalJSON(b []byte) error {
+	return VirtualServiceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
 // message: SourceLabelsEntry
-// fieldName name:"key" number:1 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"key"
-// fieldName name:"value" number:2 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"value"
+// Generating Marshal for message: SourceLabelsEntry
+// MarshalJSON is a custom marshaler supporting oneof fields for TLSMatchAttributes_SourceLabelsEntry
+func (this *TLSMatchAttributes_SourceLabelsEntry) MarshalJSON() ([]byte, error) {
+	str, err := VirtualServiceMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for TLSMatchAttributes_SourceLabelsEntry
+func (this *TLSMatchAttributes_SourceLabelsEntry) UnmarshalJSON(b []byte) error {
+	return VirtualServiceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
 // message: HTTPRedirect
-// fieldName name:"uri" number:1 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"uri"
-// fieldName name:"authority" number:2 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"authority"
+// Generating Marshal for message: HTTPRedirect
+// MarshalJSON is a custom marshaler supporting oneof fields for HTTPRedirect
+func (this *HTTPRedirect) MarshalJSON() ([]byte, error) {
+	str, err := VirtualServiceMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for HTTPRedirect
+func (this *HTTPRedirect) UnmarshalJSON(b []byte) error {
+	return VirtualServiceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
 // message: HTTPRewrite
-// fieldName name:"uri" number:1 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"uri"
-// fieldName name:"authority" number:2 label:LABEL_OPTIONAL type:TYPE_STRING json_name:"authority"
+// Generating Marshal for message: HTTPRewrite
+// MarshalJSON is a custom marshaler supporting oneof fields for HTTPRewrite
+func (this *HTTPRewrite) MarshalJSON() ([]byte, error) {
+	str, err := VirtualServiceMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for HTTPRewrite
+func (this *HTTPRewrite) UnmarshalJSON(b []byte) error {
+	return VirtualServiceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
 // message: StringMatch
 // Generating Marshal for message: StringMatch
 // MarshalJSON is a custom marshaler supporting oneof fields for StringMatch
@@ -176,9 +385,6 @@ func (this *StringMatch) UnmarshalJSON(b []byte) error {
 }
 
 // message: HTTPRetry
-// fieldName name:"attempts" number:1 label:LABEL_OPTIONAL type:TYPE_INT32 json_name:"attempts"
-// fieldName name:"per_try_timeout" number:2 label:LABEL_OPTIONAL type:TYPE_MESSAGE type_name:".google.protobuf.Duration" json_name:"perTryTimeout"
-// message has wkt HTTPRetry
 // Generating Marshal for message: HTTPRetry
 // MarshalJSON is a custom marshaler supporting oneof fields for HTTPRetry
 func (this *HTTPRetry) MarshalJSON() ([]byte, error) {
@@ -192,12 +398,6 @@ func (this *HTTPRetry) UnmarshalJSON(b []byte) error {
 }
 
 // message: CorsPolicy
-// fieldName name:"allow_origin" number:1 label:LABEL_REPEATED type:TYPE_STRING json_name:"allowOrigin"
-// fieldName name:"allow_methods" number:2 label:LABEL_REPEATED type:TYPE_STRING json_name:"allowMethods"
-// fieldName name:"allow_headers" number:3 label:LABEL_REPEATED type:TYPE_STRING json_name:"allowHeaders"
-// fieldName name:"expose_headers" number:4 label:LABEL_REPEATED type:TYPE_STRING json_name:"exposeHeaders"
-// fieldName name:"max_age" number:5 label:LABEL_OPTIONAL type:TYPE_MESSAGE type_name:".google.protobuf.Duration" json_name:"maxAge"
-// message has wkt CorsPolicy
 // Generating Marshal for message: CorsPolicy
 // MarshalJSON is a custom marshaler supporting oneof fields for CorsPolicy
 func (this *CorsPolicy) MarshalJSON() ([]byte, error) {
@@ -211,8 +411,18 @@ func (this *CorsPolicy) UnmarshalJSON(b []byte) error {
 }
 
 // message: HTTPFaultInjection
-// fieldName name:"delay" number:1 label:LABEL_OPTIONAL type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.HTTPFaultInjection.Delay" json_name:"delay"
-// fieldName name:"abort" number:2 label:LABEL_OPTIONAL type:TYPE_MESSAGE type_name:".istio.networking.v1alpha3.HTTPFaultInjection.Abort" json_name:"abort"
+// Generating Marshal for message: HTTPFaultInjection
+// MarshalJSON is a custom marshaler supporting oneof fields for HTTPFaultInjection
+func (this *HTTPFaultInjection) MarshalJSON() ([]byte, error) {
+	str, err := VirtualServiceMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for HTTPFaultInjection
+func (this *HTTPFaultInjection) UnmarshalJSON(b []byte) error {
+	return VirtualServiceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
 // message: Delay
 // Generating Marshal for message: Delay
 // MarshalJSON is a custom marshaler supporting oneof fields for HTTPFaultInjection_Delay
@@ -253,7 +463,18 @@ func (this *PortSelector) UnmarshalJSON(b []byte) error {
 }
 
 // message: Percent
-// fieldName name:"value" number:1 label:LABEL_OPTIONAL type:TYPE_DOUBLE json_name:"value"
+// Generating Marshal for message: Percent
+// MarshalJSON is a custom marshaler supporting oneof fields for Percent
+func (this *Percent) MarshalJSON() ([]byte, error) {
+	str, err := VirtualServiceMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler supporting oneof fields for Percent
+func (this *Percent) UnmarshalJSON(b []byte) error {
+	return VirtualServiceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
 var (
 	VirtualServiceMarshaler   = &github_com_gogo_protobuf_jsonpb.Marshaler{}
 	VirtualServiceUnmarshaler = &github_com_gogo_protobuf_jsonpb.Unmarshaler{}
