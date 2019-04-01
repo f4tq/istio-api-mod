@@ -17,18 +17,7 @@ var _ = fmt.Errorf
 var _ = math.Inf
 
 // message: DestinationRule
-// Generating Marshal for message: DestinationRule
-// MarshalJSON is a custom marshaler supporting oneof fields for DestinationRule
-func (this *DestinationRule) MarshalJSON() ([]byte, error) {
-	str, err := DestinationRuleMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for DestinationRule
-func (this *DestinationRule) UnmarshalJSON(b []byte) error {
-	return DestinationRuleUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
+// skipping message: DestinationRule
 // message: TrafficPolicy
 // Generating Marshal for message: TrafficPolicy
 // MarshalJSON is a custom marshaler supporting oneof fields for TrafficPolicy
@@ -43,18 +32,7 @@ func (this *TrafficPolicy) UnmarshalJSON(b []byte) error {
 }
 
 // message: PortTrafficPolicy
-// Generating Marshal for message: PortTrafficPolicy
-// MarshalJSON is a custom marshaler supporting oneof fields for TrafficPolicy_PortTrafficPolicy
-func (this *TrafficPolicy_PortTrafficPolicy) MarshalJSON() ([]byte, error) {
-	str, err := DestinationRuleMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for TrafficPolicy_PortTrafficPolicy
-func (this *TrafficPolicy_PortTrafficPolicy) UnmarshalJSON(b []byte) error {
-	return DestinationRuleUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
+// skipping message: PortTrafficPolicy
 // message: Subset
 // Generating Marshal for message: Subset
 // MarshalJSON is a custom marshaler supporting oneof fields for Subset
@@ -69,18 +47,7 @@ func (this *Subset) UnmarshalJSON(b []byte) error {
 }
 
 // message: LabelsEntry
-// Generating Marshal for message: LabelsEntry
-// MarshalJSON is a custom marshaler supporting oneof fields for Subset_LabelsEntry
-func (this *Subset_LabelsEntry) MarshalJSON() ([]byte, error) {
-	str, err := DestinationRuleMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for Subset_LabelsEntry
-func (this *Subset_LabelsEntry) UnmarshalJSON(b []byte) error {
-	return DestinationRuleUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
+// skipping message: LabelsEntry
 // message: LoadBalancerSettings
 // Generating Marshal for message: LoadBalancerSettings
 // MarshalJSON is a custom marshaler supporting oneof fields for LoadBalancerSettings
@@ -108,18 +75,7 @@ func (this *LoadBalancerSettings_ConsistentHashLB) UnmarshalJSON(b []byte) error
 }
 
 // message: HTTPCookie
-// Generating Marshal for message: HTTPCookie
-// MarshalJSON is a custom marshaler supporting oneof fields for LoadBalancerSettings_ConsistentHashLB_HTTPCookie
-func (this *LoadBalancerSettings_ConsistentHashLB_HTTPCookie) MarshalJSON() ([]byte, error) {
-	str, err := DestinationRuleMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for LoadBalancerSettings_ConsistentHashLB_HTTPCookie
-func (this *LoadBalancerSettings_ConsistentHashLB_HTTPCookie) UnmarshalJSON(b []byte) error {
-	return DestinationRuleUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
+// skipping message: HTTPCookie
 // message: ConnectionPoolSettings
 // Generating Marshal for message: ConnectionPoolSettings
 // MarshalJSON is a custom marshaler supporting oneof fields for ConnectionPoolSettings
@@ -147,44 +103,11 @@ func (this *ConnectionPoolSettings_TCPSettings) UnmarshalJSON(b []byte) error {
 }
 
 // message: TcpKeepalive
-// Generating Marshal for message: TcpKeepalive
-// MarshalJSON is a custom marshaler supporting oneof fields for ConnectionPoolSettings_TCPSettings_TcpKeepalive
-func (this *ConnectionPoolSettings_TCPSettings_TcpKeepalive) MarshalJSON() ([]byte, error) {
-	str, err := DestinationRuleMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for ConnectionPoolSettings_TCPSettings_TcpKeepalive
-func (this *ConnectionPoolSettings_TCPSettings_TcpKeepalive) UnmarshalJSON(b []byte) error {
-	return DestinationRuleUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
+// skipping message: TcpKeepalive
 // message: HTTPSettings
-// Generating Marshal for message: HTTPSettings
-// MarshalJSON is a custom marshaler supporting oneof fields for ConnectionPoolSettings_HTTPSettings
-func (this *ConnectionPoolSettings_HTTPSettings) MarshalJSON() ([]byte, error) {
-	str, err := DestinationRuleMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for ConnectionPoolSettings_HTTPSettings
-func (this *ConnectionPoolSettings_HTTPSettings) UnmarshalJSON(b []byte) error {
-	return DestinationRuleUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
+// skipping message: HTTPSettings
 // message: OutlierDetection
-// Generating Marshal for message: OutlierDetection
-// MarshalJSON is a custom marshaler supporting oneof fields for OutlierDetection
-func (this *OutlierDetection) MarshalJSON() ([]byte, error) {
-	str, err := DestinationRuleMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for OutlierDetection
-func (this *OutlierDetection) UnmarshalJSON(b []byte) error {
-	return DestinationRuleUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
+// skipping message: OutlierDetection
 // message: TLSSettings
 // Generating Marshal for message: TLSSettings
 // MarshalJSON is a custom marshaler supporting oneof fields for TLSSettings

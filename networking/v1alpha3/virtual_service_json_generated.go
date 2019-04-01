@@ -47,31 +47,9 @@ var _ = fmt.Errorf
 var _ = math.Inf
 
 // message: VirtualService
-// Generating Marshal for message: VirtualService
-// MarshalJSON is a custom marshaler supporting oneof fields for VirtualService
-func (this *VirtualService) MarshalJSON() ([]byte, error) {
-	str, err := VirtualServiceMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for VirtualService
-func (this *VirtualService) UnmarshalJSON(b []byte) error {
-	return VirtualServiceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
+// skipping message: VirtualService
 // message: Destination
-// Generating Marshal for message: Destination
-// MarshalJSON is a custom marshaler supporting oneof fields for Destination
-func (this *Destination) MarshalJSON() ([]byte, error) {
-	str, err := VirtualServiceMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for Destination
-func (this *Destination) UnmarshalJSON(b []byte) error {
-	return VirtualServiceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
+// skipping message: Destination
 // message: HTTPRoute
 // Generating Marshal for message: HTTPRoute
 // MarshalJSON is a custom marshaler supporting oneof fields for HTTPRoute
@@ -86,44 +64,11 @@ func (this *HTTPRoute) UnmarshalJSON(b []byte) error {
 }
 
 // message: AppendHeadersEntry
-// Generating Marshal for message: AppendHeadersEntry
-// MarshalJSON is a custom marshaler supporting oneof fields for HTTPRoute_AppendHeadersEntry
-func (this *HTTPRoute_AppendHeadersEntry) MarshalJSON() ([]byte, error) {
-	str, err := VirtualServiceMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for HTTPRoute_AppendHeadersEntry
-func (this *HTTPRoute_AppendHeadersEntry) UnmarshalJSON(b []byte) error {
-	return VirtualServiceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
+// skipping message: AppendHeadersEntry
 // message: AppendResponseHeadersEntry
-// Generating Marshal for message: AppendResponseHeadersEntry
-// MarshalJSON is a custom marshaler supporting oneof fields for HTTPRoute_AppendResponseHeadersEntry
-func (this *HTTPRoute_AppendResponseHeadersEntry) MarshalJSON() ([]byte, error) {
-	str, err := VirtualServiceMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for HTTPRoute_AppendResponseHeadersEntry
-func (this *HTTPRoute_AppendResponseHeadersEntry) UnmarshalJSON(b []byte) error {
-	return VirtualServiceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
+// skipping message: AppendResponseHeadersEntry
 // message: AppendRequestHeadersEntry
-// Generating Marshal for message: AppendRequestHeadersEntry
-// MarshalJSON is a custom marshaler supporting oneof fields for HTTPRoute_AppendRequestHeadersEntry
-func (this *HTTPRoute_AppendRequestHeadersEntry) MarshalJSON() ([]byte, error) {
-	str, err := VirtualServiceMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for HTTPRoute_AppendRequestHeadersEntry
-func (this *HTTPRoute_AppendRequestHeadersEntry) UnmarshalJSON(b []byte) error {
-	return VirtualServiceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
+// skipping message: AppendRequestHeadersEntry
 // message: Headers
 // Generating Marshal for message: Headers
 // MarshalJSON is a custom marshaler supporting oneof fields for Headers
@@ -151,57 +96,13 @@ func (this *Headers_HeaderOperations) UnmarshalJSON(b []byte) error {
 }
 
 // message: SetEntry
-// Generating Marshal for message: SetEntry
-// MarshalJSON is a custom marshaler supporting oneof fields for Headers_HeaderOperations_SetEntry
-func (this *Headers_HeaderOperations_SetEntry) MarshalJSON() ([]byte, error) {
-	str, err := VirtualServiceMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for Headers_HeaderOperations_SetEntry
-func (this *Headers_HeaderOperations_SetEntry) UnmarshalJSON(b []byte) error {
-	return VirtualServiceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
+// skipping message: SetEntry
 // message: AddEntry
-// Generating Marshal for message: AddEntry
-// MarshalJSON is a custom marshaler supporting oneof fields for Headers_HeaderOperations_AddEntry
-func (this *Headers_HeaderOperations_AddEntry) MarshalJSON() ([]byte, error) {
-	str, err := VirtualServiceMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for Headers_HeaderOperations_AddEntry
-func (this *Headers_HeaderOperations_AddEntry) UnmarshalJSON(b []byte) error {
-	return VirtualServiceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
+// skipping message: AddEntry
 // message: TLSRoute
-// Generating Marshal for message: TLSRoute
-// MarshalJSON is a custom marshaler supporting oneof fields for TLSRoute
-func (this *TLSRoute) MarshalJSON() ([]byte, error) {
-	str, err := VirtualServiceMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for TLSRoute
-func (this *TLSRoute) UnmarshalJSON(b []byte) error {
-	return VirtualServiceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
+// skipping message: TLSRoute
 // message: TCPRoute
-// Generating Marshal for message: TCPRoute
-// MarshalJSON is a custom marshaler supporting oneof fields for TCPRoute
-func (this *TCPRoute) MarshalJSON() ([]byte, error) {
-	str, err := VirtualServiceMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for TCPRoute
-func (this *TCPRoute) UnmarshalJSON(b []byte) error {
-	return VirtualServiceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
+// skipping message: TCPRoute
 // message: HTTPMatchRequest
 // Generating Marshal for message: HTTPMatchRequest
 // MarshalJSON is a custom marshaler supporting oneof fields for HTTPMatchRequest
@@ -216,31 +117,9 @@ func (this *HTTPMatchRequest) UnmarshalJSON(b []byte) error {
 }
 
 // message: HeadersEntry
-// Generating Marshal for message: HeadersEntry
-// MarshalJSON is a custom marshaler supporting oneof fields for HTTPMatchRequest_HeadersEntry
-func (this *HTTPMatchRequest_HeadersEntry) MarshalJSON() ([]byte, error) {
-	str, err := VirtualServiceMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for HTTPMatchRequest_HeadersEntry
-func (this *HTTPMatchRequest_HeadersEntry) UnmarshalJSON(b []byte) error {
-	return VirtualServiceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
+// skipping message: HeadersEntry
 // message: SourceLabelsEntry
-// Generating Marshal for message: SourceLabelsEntry
-// MarshalJSON is a custom marshaler supporting oneof fields for HTTPMatchRequest_SourceLabelsEntry
-func (this *HTTPMatchRequest_SourceLabelsEntry) MarshalJSON() ([]byte, error) {
-	str, err := VirtualServiceMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for HTTPMatchRequest_SourceLabelsEntry
-func (this *HTTPMatchRequest_SourceLabelsEntry) UnmarshalJSON(b []byte) error {
-	return VirtualServiceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
+// skipping message: SourceLabelsEntry
 // message: HTTPRouteDestination
 // Generating Marshal for message: HTTPRouteDestination
 // MarshalJSON is a custom marshaler supporting oneof fields for HTTPRouteDestination
@@ -255,44 +134,11 @@ func (this *HTTPRouteDestination) UnmarshalJSON(b []byte) error {
 }
 
 // message: AppendResponseHeadersEntry
-// Generating Marshal for message: AppendResponseHeadersEntry
-// MarshalJSON is a custom marshaler supporting oneof fields for HTTPRouteDestination_AppendResponseHeadersEntry
-func (this *HTTPRouteDestination_AppendResponseHeadersEntry) MarshalJSON() ([]byte, error) {
-	str, err := VirtualServiceMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for HTTPRouteDestination_AppendResponseHeadersEntry
-func (this *HTTPRouteDestination_AppendResponseHeadersEntry) UnmarshalJSON(b []byte) error {
-	return VirtualServiceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
+// skipping message: AppendResponseHeadersEntry
 // message: AppendRequestHeadersEntry
-// Generating Marshal for message: AppendRequestHeadersEntry
-// MarshalJSON is a custom marshaler supporting oneof fields for HTTPRouteDestination_AppendRequestHeadersEntry
-func (this *HTTPRouteDestination_AppendRequestHeadersEntry) MarshalJSON() ([]byte, error) {
-	str, err := VirtualServiceMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for HTTPRouteDestination_AppendRequestHeadersEntry
-func (this *HTTPRouteDestination_AppendRequestHeadersEntry) UnmarshalJSON(b []byte) error {
-	return VirtualServiceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
+// skipping message: AppendRequestHeadersEntry
 // message: RouteDestination
-// Generating Marshal for message: RouteDestination
-// MarshalJSON is a custom marshaler supporting oneof fields for RouteDestination
-func (this *RouteDestination) MarshalJSON() ([]byte, error) {
-	str, err := VirtualServiceMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for RouteDestination
-func (this *RouteDestination) UnmarshalJSON(b []byte) error {
-	return VirtualServiceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
+// skipping message: RouteDestination
 // message: L4MatchAttributes
 // Generating Marshal for message: L4MatchAttributes
 // MarshalJSON is a custom marshaler supporting oneof fields for L4MatchAttributes
@@ -307,18 +153,7 @@ func (this *L4MatchAttributes) UnmarshalJSON(b []byte) error {
 }
 
 // message: SourceLabelsEntry
-// Generating Marshal for message: SourceLabelsEntry
-// MarshalJSON is a custom marshaler supporting oneof fields for L4MatchAttributes_SourceLabelsEntry
-func (this *L4MatchAttributes_SourceLabelsEntry) MarshalJSON() ([]byte, error) {
-	str, err := VirtualServiceMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for L4MatchAttributes_SourceLabelsEntry
-func (this *L4MatchAttributes_SourceLabelsEntry) UnmarshalJSON(b []byte) error {
-	return VirtualServiceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
+// skipping message: SourceLabelsEntry
 // message: TLSMatchAttributes
 // Generating Marshal for message: TLSMatchAttributes
 // MarshalJSON is a custom marshaler supporting oneof fields for TLSMatchAttributes
@@ -333,44 +168,11 @@ func (this *TLSMatchAttributes) UnmarshalJSON(b []byte) error {
 }
 
 // message: SourceLabelsEntry
-// Generating Marshal for message: SourceLabelsEntry
-// MarshalJSON is a custom marshaler supporting oneof fields for TLSMatchAttributes_SourceLabelsEntry
-func (this *TLSMatchAttributes_SourceLabelsEntry) MarshalJSON() ([]byte, error) {
-	str, err := VirtualServiceMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for TLSMatchAttributes_SourceLabelsEntry
-func (this *TLSMatchAttributes_SourceLabelsEntry) UnmarshalJSON(b []byte) error {
-	return VirtualServiceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
+// skipping message: SourceLabelsEntry
 // message: HTTPRedirect
-// Generating Marshal for message: HTTPRedirect
-// MarshalJSON is a custom marshaler supporting oneof fields for HTTPRedirect
-func (this *HTTPRedirect) MarshalJSON() ([]byte, error) {
-	str, err := VirtualServiceMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for HTTPRedirect
-func (this *HTTPRedirect) UnmarshalJSON(b []byte) error {
-	return VirtualServiceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
+// skipping message: HTTPRedirect
 // message: HTTPRewrite
-// Generating Marshal for message: HTTPRewrite
-// MarshalJSON is a custom marshaler supporting oneof fields for HTTPRewrite
-func (this *HTTPRewrite) MarshalJSON() ([]byte, error) {
-	str, err := VirtualServiceMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for HTTPRewrite
-func (this *HTTPRewrite) UnmarshalJSON(b []byte) error {
-	return VirtualServiceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
+// skipping message: HTTPRewrite
 // message: StringMatch
 // Generating Marshal for message: StringMatch
 // MarshalJSON is a custom marshaler supporting oneof fields for StringMatch
@@ -385,31 +187,9 @@ func (this *StringMatch) UnmarshalJSON(b []byte) error {
 }
 
 // message: HTTPRetry
-// Generating Marshal for message: HTTPRetry
-// MarshalJSON is a custom marshaler supporting oneof fields for HTTPRetry
-func (this *HTTPRetry) MarshalJSON() ([]byte, error) {
-	str, err := VirtualServiceMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for HTTPRetry
-func (this *HTTPRetry) UnmarshalJSON(b []byte) error {
-	return VirtualServiceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
+// skipping message: HTTPRetry
 // message: CorsPolicy
-// Generating Marshal for message: CorsPolicy
-// MarshalJSON is a custom marshaler supporting oneof fields for CorsPolicy
-func (this *CorsPolicy) MarshalJSON() ([]byte, error) {
-	str, err := VirtualServiceMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for CorsPolicy
-func (this *CorsPolicy) UnmarshalJSON(b []byte) error {
-	return VirtualServiceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
+// skipping message: CorsPolicy
 // message: HTTPFaultInjection
 // Generating Marshal for message: HTTPFaultInjection
 // MarshalJSON is a custom marshaler supporting oneof fields for HTTPFaultInjection
@@ -463,18 +243,7 @@ func (this *PortSelector) UnmarshalJSON(b []byte) error {
 }
 
 // message: Percent
-// Generating Marshal for message: Percent
-// MarshalJSON is a custom marshaler supporting oneof fields for Percent
-func (this *Percent) MarshalJSON() ([]byte, error) {
-	str, err := VirtualServiceMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for Percent
-func (this *Percent) UnmarshalJSON(b []byte) error {
-	return VirtualServiceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
+// skipping message: Percent
 var (
 	VirtualServiceMarshaler   = &github_com_gogo_protobuf_jsonpb.Marshaler{}
 	VirtualServiceUnmarshaler = &github_com_gogo_protobuf_jsonpb.Unmarshaler{}

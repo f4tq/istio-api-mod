@@ -15,44 +15,11 @@ var _ = fmt.Errorf
 var _ = math.Inf
 
 // message: Sidecar
-// Generating Marshal for message: Sidecar
-// MarshalJSON is a custom marshaler supporting oneof fields for Sidecar
-func (this *Sidecar) MarshalJSON() ([]byte, error) {
-	str, err := SidecarMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for Sidecar
-func (this *Sidecar) UnmarshalJSON(b []byte) error {
-	return SidecarUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
+// skipping message: Sidecar
 // message: IstioIngressListener
-// Generating Marshal for message: IstioIngressListener
-// MarshalJSON is a custom marshaler supporting oneof fields for IstioIngressListener
-func (this *IstioIngressListener) MarshalJSON() ([]byte, error) {
-	str, err := SidecarMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for IstioIngressListener
-func (this *IstioIngressListener) UnmarshalJSON(b []byte) error {
-	return SidecarUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
+// skipping message: IstioIngressListener
 // message: IstioEgressListener
-// Generating Marshal for message: IstioEgressListener
-// MarshalJSON is a custom marshaler supporting oneof fields for IstioEgressListener
-func (this *IstioEgressListener) MarshalJSON() ([]byte, error) {
-	str, err := SidecarMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for IstioEgressListener
-func (this *IstioEgressListener) UnmarshalJSON(b []byte) error {
-	return SidecarUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
+// skipping message: IstioEgressListener
 // message: WorkloadSelector
 // Generating Marshal for message: WorkloadSelector
 // MarshalJSON is a custom marshaler supporting oneof fields for WorkloadSelector
@@ -67,18 +34,7 @@ func (this *WorkloadSelector) UnmarshalJSON(b []byte) error {
 }
 
 // message: LabelsEntry
-// Generating Marshal for message: LabelsEntry
-// MarshalJSON is a custom marshaler supporting oneof fields for WorkloadSelector_LabelsEntry
-func (this *WorkloadSelector_LabelsEntry) MarshalJSON() ([]byte, error) {
-	str, err := SidecarMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for WorkloadSelector_LabelsEntry
-func (this *WorkloadSelector_LabelsEntry) UnmarshalJSON(b []byte) error {
-	return SidecarUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
+// skipping message: LabelsEntry
 var (
 	SidecarMarshaler   = &github_com_gogo_protobuf_jsonpb.Marshaler{}
 	SidecarUnmarshaler = &github_com_gogo_protobuf_jsonpb.Unmarshaler{}

@@ -28,18 +28,7 @@ func (this *Gateway) UnmarshalJSON(b []byte) error {
 }
 
 // message: SelectorEntry
-// Generating Marshal for message: SelectorEntry
-// MarshalJSON is a custom marshaler supporting oneof fields for Gateway_SelectorEntry
-func (this *Gateway_SelectorEntry) MarshalJSON() ([]byte, error) {
-	str, err := GatewayMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for Gateway_SelectorEntry
-func (this *Gateway_SelectorEntry) UnmarshalJSON(b []byte) error {
-	return GatewayUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
+// skipping message: SelectorEntry
 // message: Server
 // Generating Marshal for message: Server
 // MarshalJSON is a custom marshaler supporting oneof fields for Server
@@ -67,18 +56,7 @@ func (this *Server_TLSOptions) UnmarshalJSON(b []byte) error {
 }
 
 // message: Port
-// Generating Marshal for message: Port
-// MarshalJSON is a custom marshaler supporting oneof fields for Port
-func (this *Port) MarshalJSON() ([]byte, error) {
-	str, err := GatewayMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for Port
-func (this *Port) UnmarshalJSON(b []byte) error {
-	return GatewayUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
+// skipping message: Port
 var (
 	GatewayMarshaler   = &github_com_gogo_protobuf_jsonpb.Marshaler{}
 	GatewayUnmarshaler = &github_com_gogo_protobuf_jsonpb.Unmarshaler{}

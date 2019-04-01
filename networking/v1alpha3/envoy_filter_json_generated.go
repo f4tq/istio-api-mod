@@ -29,18 +29,7 @@ func (this *EnvoyFilter) UnmarshalJSON(b []byte) error {
 }
 
 // message: WorkloadLabelsEntry
-// Generating Marshal for message: WorkloadLabelsEntry
-// MarshalJSON is a custom marshaler supporting oneof fields for EnvoyFilter_WorkloadLabelsEntry
-func (this *EnvoyFilter_WorkloadLabelsEntry) MarshalJSON() ([]byte, error) {
-	str, err := EnvoyFilterMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler supporting oneof fields for EnvoyFilter_WorkloadLabelsEntry
-func (this *EnvoyFilter_WorkloadLabelsEntry) UnmarshalJSON(b []byte) error {
-	return EnvoyFilterUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
+// skipping message: WorkloadLabelsEntry
 // message: ListenerMatch
 // Generating Marshal for message: ListenerMatch
 // MarshalJSON is a custom marshaler supporting oneof fields for EnvoyFilter_ListenerMatch
